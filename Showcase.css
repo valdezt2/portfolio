@@ -1,0 +1,226 @@
+/* ============================
+   COLOR SYSTEM
+============================ */
+:root {
+  /* Blue + Gray Palette */
+  --blue-100: #e8f1fb;
+  --blue-300: #8bb8e8;
+  --blue-500: #3a7bd5;   /* Primary accent */
+  --blue-700: #1f4e79;
+  --blue-900: #102a43;
+
+  --gray-100: #f5f7fa;
+  --gray-300: #d9e2ec;
+  --gray-500: #9aa5b1;
+  --gray-700: #52606d;
+  --gray-900: #1f2933;
+
+  /* Page Colors */
+  --page-bg: var(--gray-100);
+  --text-color: var(--gray-900);
+  --card-bg: #ffffff;
+  --border-color: var(--gray-300);
+
+  /* Accent Buttons / Links */
+  --accent-dark: var(--blue-700);
+  --accent-dark-hover: var(--blue-900);
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+  --page-bg: #1e1e1e;
+  --text-color: #e6e6e6;
+  --card-bg: #2a2a2a;
+  --border-color: var(--gray-700);
+
+  --accent-dark: var(--blue-500);
+  --accent-dark-hover: var(--blue-300);
+}
+
+/* ============================
+   GLOBAL STYLES
+============================ */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 2rem;
+  background-color: var(--page-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3 {
+  color: var(--text-color);
+  text-align: center;
+}
+
+.content {
+  max-width: 800px;
+  margin: auto;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: background 0.3s ease;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: border-color 0.3s ease;
+}
+
+/* ============================
+   LIGHT/DARK MODE TOGGLE
+============================ */
+.theme-toggle {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: var(--accent-dark);
+  color: #458fcd;
+  border: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 999;
+}
+
+.theme-toggle:hover {
+  background: var(--accent-dark-hover);
+  transform: scale(1.05);
+}
+
+/* ============================
+   BEFORE/AFTER SLIDER
+============================ */
+.before-after-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.before-after-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+.before-after-container img {
+  width: 100%;
+  display: block;
+}
+
+.after-img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+  height: 100%;
+}
+
+.slider {
+  width: 100%;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+/* ============================
+   RESPONSIVE GRID LAYOUT
+============================ */
+.grid-showcase {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.grid-item {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(135, 102, 226, 0.08);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+}
+
+/* ============================
+   RESTORATION GALLERY
+============================ */
+.restoration-gallery {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 8px rgba(#458fcd);
+  transition: transform 0.2s ease, border-color 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* ============================
+   DOWNLOAD BUTTON
+============================ */
+.download-wrapper {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.download-btn {
+  background: var(--accent-dark);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background: var(--accent-dark-hover);
+}
+
+/* ============================
+   FOOTER
+============================ */
+.site-footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 1.5rem 0;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border-color);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}

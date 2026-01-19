@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project One – Old Photo Restoration</title>
-
-  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="sitewide.css">
   <link rel="stylesheet" href="showcase.css">
 </head>
 
@@ -19,19 +18,18 @@
     <li><a href="color-theory.html">Color Theory Showcase</a></li>
     <li><a href="typography-showcase.html">Typography Project</a></li>
     <li><a href="magazine cover with showcase css.html">Magazine Cover</a></li>
-    <li><a href="photo-restoration.html">Photo Restoration</a>li>
+    <li><a href="photo-restoration.html">Photo Restoration</a></li>
   </ul>
 </nav>
 
 
-  <!-- Light/Dark Mode Toggle -->
+
   <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
     <span class="toggle-icon">🌙</span>
   </button>
 
 
 
-  <!-- Light/Dark Mode Toggle -->
   <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
     <span class="toggle-icon">🌙</span>
   </button>
@@ -40,7 +38,7 @@
     <h1>Project One – Old Photo Restoration</h1>
 
 
-    <!-- Before/After Slider -->
+
     <section class="before-after-section">
       <h2>Before & After Restoration</h2>
 
@@ -53,12 +51,10 @@
       </div>
     </section>
 
-        <!-- Download Button -->
     <div class="download-wrapper">
       <a href="after.jpg" download class="download-btn">Download Restored Image</a>
     </div>
 
-    <!-- Responsive Grid Section -->
     <section class="grid-showcase">
       <h2>Restoration Process Highlights</h2>
 
@@ -85,7 +81,6 @@
       </div>
     </section>
 
-    <!-- Narrative Section -->
     <section>
       <p>As a novice in Photoshop, I set out to restore an old Civil War photograph, experimenting with various tools to achieve the best results. My first step was to select an old photo of a young man taken after the Civil War. Since I work in the field of prosthetics, I chose this photo for restoration as it represents the type of images we commonly encounter in our offices and prosthetic labs.</p>
 
@@ -106,33 +101,13 @@
 
   </div>
 
-  <!-- Footer -->
+
   <footer class="site-footer">
     <p><strong>Jacqueline Valdez</strong> • Web Design Professional Program • Project One</p>
  
   </footer>
 
-  <!-- JavaScript -->
-  <script>
-    // Light/Dark Mode Toggle
-    const toggleBtn = document.getElementById("themeToggle");
-    const icon = toggleBtn.querySelector(".toggle-icon");
-
-    toggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-      icon.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
-    });
-
-    // Before/After Slider
-    const slider = document.getElementById("sliderControl");
-    const afterWrapper = document.querySelector(".after-img-wrapper");
-
-    slider.addEventListener("input", function () {
-      afterWrapper.style.width = this.value + "%";
-    });
-  </script>
 
 </body>
 </html>
-
 

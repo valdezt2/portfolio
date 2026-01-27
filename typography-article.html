@@ -2,116 +2,168 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Typography in Web Design: BionIT Labs vs Covvi</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 2em;
-      line-height: 1.6;
-      background-color: #fdfdfd;
-      color: #333;
-    }
-    h1, h2 {
-      color: #2c3e50;
-    }
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1em;
-      margin-bottom: 2em;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 0.75em;
-      text-align: left;
-    }
-    th {
-      background-color: #f0f0f0;
-    }
-    .section {
-      margin-bottom: 2em;
-    }
-  </style>
+
+  <!-- Unified Styles -->
+  <link rel="stylesheet" href="sitewide.css">
+  <link rel="stylesheet" href="typography-article.css">
 </head>
+
 <body>
 
-  <header>
-    <h1>Typography in Web Design: A Comparison of BionIT Labs and Covvi</h1>
-    <p>Typography is not merely about choosing fonts; it is a powerful tool that guides the reader, strengthens brand identity, and ensures accessibility for everyone. In the cutting-edge world of bionic innovation, where clarity and trust are paramount, effective typography becomes essential.</p>
-    <p>Let’s take a closer look at two leading websites: 
-      <a href="https://www.bionitlabs.com" target="_blank">BionIT Labs</a> and 
-      <a href="https://www.covvi.com" target="_blank">Covvi</a>. 
-      By analyzing how each platform thoughtfully integrates typography, we can see how they not only communicate their messages but also engage and inspire their audiences.
-    </p>
+  <!-- Main Navigation -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+
+      <!-- Dropdown Parent -->
+      <li class="dropdown">
+        <a href="color-theory.html" class="dropdown-toggle">Color Theory ▾</a>
+
+        <ul class="dropdown-menu">
+          <li><a href="color-theory.html">Color Theory Showcase</a></li>
+          <li><a href="color-theme-showcase.html">Color Themes</a></li>
+          <li><a href="color-theory-overview.html">Color Theory Overview</a></li>
+          <li><a href="color-theory-article.html">Color Theory Article</a></li>
+        </ul>
+      </li>
+
+      <li><a href="typography-showcase.html">Typography Showcase</a></li>
+      <li><a href="magazine-cover.html">Magazine Cover</a></li>
+      <li><a href="photo-restoration.html">Photo Restoration</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+    <h1>Typography in Web Design</h1>
+
+    <!-- Light/Dark Mode Toggle -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+      🌙
+    </button>
   </header>
 
-  <section class="section">
-    <h2>BionIT Labs: Clean, Technical, and Accessible</h2>
-    <p>BionIT Labs uses a modern sans-serif typeface throughout its site, likely something like Roboto or Open Sans, both known for their clarity and neutrality.</p>
-    <h3>Typography Highlights:</h3>
-    <ul>
-      <li><strong>Font Style:</strong> Clean sans-serif, optimized for legibility</li>
-      <li><strong>Hierarchy:</strong> Clear headings, subheadings, and body text with consistent spacing</li>
-      <li><strong>Readability:</strong> Generous line height and contrast against white and blue backgrounds</li>
-      <li><strong>Tone:</strong> Professional, clinical, and trustworthy—ideal for medical technology</li>
-    </ul>
-    <p><strong>Impact:</strong> The typography supports the brand’s focus on technical excellence and user empowerment, making complex information easy to digest for clinicians, patients, and partners.</p>
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h2>BionIT Labs vs Covvi</h2>
+    <p>How typography shapes clarity, trust, and emotional tone in bionic technology branding.</p>
   </section>
 
-  <section class="section">
-    <h2>Covvi: Elegant, Bold, and Aspirational</h2>
-    <p>Covvi’s site uses a mix of serif and sans-serif fonts, possibly including Playfair Display or Raleway, to create a luxurious and design-forward feel.</p>
-    <h3>Typography Highlights:</h3>
-    <ul>
-      <li><strong>Font Style:</strong> High-contrast serif headlines paired with minimalist sans-serif body text</li>
-      <li><strong>Hierarchy:</strong> Strong visual separation between sections, with bold headlines and subtle subtext</li>
-      <li><strong>Readability:</strong> Excellent contrast, though some sections use smaller text that may challenge accessibility</li>
-      <li><strong>Tone:</strong> Sleek, aspirational, and premium—positioning the product as both functional and fashionable</li>
-    </ul>
-    <p><strong>Impact:</strong> Covvi’s typography elevates its brand as a design-centric innovator, appealing to users who value personalization and aesthetics.</p>
-  </section>
+  <!-- Main Content -->
+  <main class="content-wrapper">
 
-  <section class="section">
-    <h2>Comparative Table</h2>
-    <table>
-      <tr>
-        <th>Feature</th>
-        <th>BionIT Labs</th>
-        <th>Covvi</th>
-      </tr>
-      <tr>
-        <td>Font Type</td>
-        <td>Sans-serif</td>
-        <td>Serif + Sans-serif</td>
-      </tr>
-      <tr>
-        <td>Visual Tone</td>
-        <td>Technical, clinical</td>
-        <td>Elegant, aspirational</td>
-      </tr>
-      <tr>
-        <td>Accessibility</td>
-        <td>High readability</td>
-        <td>Stylish but occasionally small text</td>
-      </tr>
-      <tr>
-        <td>Brand Alignment</td>
-        <td>Function-first</td>
-        <td>Design-first</td>
-      </tr>
-    </table>
-  </section>
+    <!-- Intro -->
+    <section class="showcase-section">
+      <div class="highlight">
+        Typography is more than font choice — it’s a strategic tool that guides attention, builds trust, and reinforces brand identity.
+      </div>
 
-  <footer>
-    <h2>Summary</h2>
-    <p>Typography serves as a significant, often unspoken symbol of your brand identity. At BionIT Labs, clarity and accessibility ensure the message is easily understood. Meanwhile, Covvi leverages typography to evoke emotions and create a memorable impact. Both strategies are effective; when aligned with your audience’s preferences and your project objectives, they can significantly enhance your overall communication.</p>
+      <p>
+        In the world of bionic innovation, where clarity and precision matter, typography becomes a core part of the user experience.
+        This article compares two leading companies —
+        <a href="https://www.bionitlabs.com" target="_blank">BionIT Labs</a> and
+        <a href="https://www.covvi.com" target="_blank">Covvi</a> —
+        to explore how their typographic choices shape perception.
+      </p>
+    </section>
+
+    <!-- BionIT Section -->
+    <section class="showcase-section">
+      <h2>BionIT Labs: Clean, Technical, and Accessible</h2>
+
+      <p>BionIT Labs uses a modern sans-serif typeface throughout its site, likely similar to Roboto or Open Sans.</p>
+
+      <h3>Typography Highlights</h3>
+      <ul>
+        <li><strong>Font Style:</strong> Clean sans-serif, optimized for legibility</li>
+        <li><strong>Hierarchy:</strong> Clear headings and consistent spacing</li>
+        <li><strong>Readability:</strong> Strong contrast and generous line height</li>
+        <li><strong>Tone:</strong> Professional, clinical, trustworthy</li>
+      </ul>
+
+      <div class="highlight">
+        Impact: BionIT’s typography reinforces technical excellence and makes complex information accessible.
+      </div>
+    </section>
+
+    <!-- Covvi Section -->
+    <section class="showcase-section">
+      <h2>Covvi: Elegant, Bold, and Aspirational</h2>
+
+      <p>Covvi uses a mix of serif and sans-serif fonts to create a luxurious, design-forward aesthetic.</p>
+
+      <h3>Typography Highlights</h3>
+      <ul>
+        <li><strong>Font Style:</strong> High-contrast serif headlines + minimalist sans-serif body text</li>
+        <li><strong>Hierarchy:</strong> Strong visual separation and bold headlines</li>
+        <li><strong>Readability:</strong> Excellent contrast, though some text is smaller</li>
+        <li><strong>Tone:</strong> Sleek, aspirational, premium</li>
+      </ul>
+
+      <div class="highlight">
+        Impact: Covvi’s typography elevates its brand and appeals to users who value personalization and style.
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="showcase-section">
+      <h2>Comparative Table</h2>
+
+      <table class="interactive-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>BionIT Labs</th>
+            <th>Covvi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Font Type</td>
+            <td>Sans-serif</td>
+            <td>Serif + Sans-serif</td>
+          </tr>
+          <tr>
+            <td>Visual Tone</td>
+            <td>Technical, clinical</td>
+            <td>Elegant, aspirational</td>
+          </tr>
+          <tr>
+            <td>Accessibility</td>
+            <td>High readability</td>
+            <td>Stylish but occasionally small text</td>
+          </tr>
+          <tr>
+            <td>Brand Alignment</td>
+            <td>Function-first</td>
+            <td>Design-first</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Summary -->
+    <section class="showcase-section">
+      <h2>Summary</h2>
+
+      <div class="highlight">
+        Typography communicates identity. BionIT prioritizes clarity; Covvi prioritizes emotion. Both succeed by aligning design with audience needs.
+      </div>
+
+      <p>
+        Typography serves as a powerful, often unspoken symbol of brand identity. At BionIT Labs, clarity and accessibility ensure the message is easily understood. Meanwhile, Covvi uses typography to evoke emotion and create a memorable impact. When aligned with audience expectations and project goals, both approaches enhance communication.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>Created by Jacqueline Valdez • Typography Analysis • Web Design Coursework</p>
   </footer>
 
 </body>

@@ -1,218 +1,190 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Color Theory Showcase – BionIT Labs vs Covvi</title>
-
-  <!-- Unified Styles -->
   <link rel="stylesheet" href="sitewide.css">
   <link rel="stylesheet" href="color-and-type.css">
 </head>
 
 <body>
 
-  <!-- Main Navigation -->
-  <nav class="main-nav">
+<!-- TOP NAVIGATION WITH DROPDOWN -->
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+
+    <li class="dropdown">
+      <a class="dropbtn">Showcases ▾</a>
+      <ul class="dropdown-content">
+        <li><a href="color-theory.html">Color Theory Showcase</a></li>
+        <li><a href="typography-showcase.html">Typography Showcase</a></li>
+        <li><a href="magazine cover with showcase css.html">Magazine Cover Project</a></li>
+        <li><a href="photo-restoration.html">Photo Restoration</a></li>
+      </ul>
+    </li>
+
+  </ul>
+</nav>
+
+
+<!-- SIDE NAVIGATION -->
+<nav id="sideNav" class="side-nav">
+  <button class="close-btn" onclick="toggleNav()">×</button>
+
+  <!-- Internal section links -->
+  <a href="#overview">Overview</a>
+  <a href="#color">Color Theory</a>
+  <a href="#type">Typography</a>
+  <a href="#summary">Summary</a>
+
+  <!-- Cross‑page links -->
+  <hr>
+  <a href="index.html">Home</a>
+  <a href="typography-showcase.html">Typography Project</a>
+  <a href="health-tips.html">Health Tips</a>
+</nav>
+
+<!-- Hero Banner -->
+<section class="hero">
+  <div class="hero-content">
+    <h2>Visual Identity Comparison</h2>
+    <p>Exploring how color and typography shape brand perception in modern bionic technology.</p>
+  </div>
+</section>
+
+
+<!-- Main Content Wrapper -->
+<main class="content-wrapper">
+
+  <!-- Overview Section -->
+  <section id="overview" class="showcase-section">
+    <h2>Overview: Two Leaders in Bionic Innovation</h2>
+
+    <div class="highlight">
+      This showcase analyzes how two major bionic companies use color and typography to communicate trust, innovation, and identity.
+    </div>
+
     <ul>
-      <li><a href="index.html">Home</a></li>
-
-      <!-- Dropdown Parent -->
-      <li class="dropdown">
-        <a href="color-theory.html" class="dropdown-toggle">Color Theory ▾</a>
-
-        <!-- Dropdown Menu -->
-        <ul class="dropdown-menu">
-          <li><a href="color-theory.html">Color Theory Showcase</a></li>
-          <li><a href="color-theme-showcase.html">Color Themes</a></li>
-          <li><a href="color-theory-overview.html">Color Theory Overview</a></li>
-          <li><a href="color-theory-article.html">Color Theory Article</a></li>
-        </ul>
-      </li>
-
-      <li><a href="typography-showcase.html">Typography Showcase</a></li>
-      <li><a href="magazine-cover.html">Magazine Cover</a></li>
-      <li><a href="photo-restoration.html">Photo Restoration</a></li>
-      <li><a href="resume.html">Resume</a></li>
+      <li><strong><a href="https://bionitlabs.com/" target="_blank">BionIT Labs</a></strong> – Italian-based company known for Adam’s Hand, a fully adaptive bionic prosthesis.</li>
+      <li><strong><a href="https://www.covvi.com/" target="_blank">Covvi</a></strong> – UK-based company offering customizable bionic hands with a strong emphasis on design and user empowerment.</li>
     </ul>
-  </nav>
+  </section>
 
-  <!-- Side Navigation (Hamburger Menu) -->
-  <nav id="sideNav" class="side-nav">
-    <button class="close-btn" onclick="toggleNav()">×</button>
 
-    <!-- Internal section links -->
-    <a href="#overview">Overview</a>
-    <a href="#color">Color Theory</a>
-    <a href="#type">Typography</a>
-    <a href="#summary">Summary</a>
+  <!-- Color Theory Section -->
+  <section id="color" class="showcase-section">
+    <h2>Color Theory Comparison</h2>
 
-    <hr>
+    <table>
+      <tr>
+        <th>Feature</th>
+        <th>BionIT Labs</th>
+        <th>Covvi</th>
+      </tr>
+      <tr>
+        <td>Primary Palette</td>
+        <td>Deep blues, white, and black</td>
+        <td>Black, white, and gold accents</td>
+      </tr>
+      <tr>
+        <td>Color Psychology</td>
+        <td>Blue evokes trust, tech-savvy professionalism</td>
+        <td>Black and gold suggest luxury, precision, and boldness</td>
+      </tr>
+      <tr>
+        <td>Contrast & Accessibility</td>
+        <td>Strong contrast; readable and clean</td>
+        <td>High contrast with elegant whitespace</td>
+      </tr>
+      <tr>
+        <td>Emotional Tone</td>
+        <td>Calm, clinical, confident</td>
+        <td>Sleek, aspirational, premium</td>
+      </tr>
+    </table>
 
-    <!-- Cross‑page links -->
-    <a href="index.html">Home</a>
-    <a href="typography-showcase.html">Typography Showcase</a>
-    <a href="color-theory-overview.html">Color Theory Overview</a>
-    <a href="color-theory-article.html">Color Theory Article</a>
-  </nav>
-
-  <!-- Sticky Header -->
-  <header class="site-header">
-    <button class="nav-toggle" onclick="toggleNav()">☰</button>
-    <h1>Color Theory Showcase</h1>
-
-    <!-- Light/Dark Mode Toggle -->
-    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
-      🌙
-    </button>
-  </header>
-
-  <!-- Hero Banner -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Visual Identity Comparison</h2>
-      <p>Exploring how color and typography shape brand perception in modern bionic technology.</p>
+    <div class="highlight">
+      BionIT Labs uses a calm, monochromatic palette that reinforces its technical credibility and medical focus.
+    </div>
+    <div class="highlight">
+      Covvi leans into a luxury aesthetic, using black and gold to position its product as both functional and fashionable.
     </div>
   </section>
 
-  <!-- Main Content Wrapper -->
-  <main class="content-wrapper">
 
-    <!-- Overview Section -->
-    <section id="overview" class="showcase-section">
-      <h2>Overview: Two Leaders in Bionic Innovation</h2>
+  <!-- Typography Section -->
+  <section id="type" class="showcase-section">
+    <h2>Typography Comparison</h2>
 
-      <div class="highlight">
-        This showcase analyzes how two major bionic companies use color and typography to communicate trust, innovation, and identity.
-      </div>
+    <table>
+      <tr>
+        <th>Feature</th>
+        <th>BionIT Labs</th>
+        <th>Covvi</th>
+      </tr>
+      <tr>
+        <td>Font Style</td>
+        <td>Sans-serif, modern, clean</td>
+        <td>Serif + sans-serif mix; elegant and structured</td>
+      </tr>
+      <tr>
+        <td>Hierarchy</td>
+        <td>Clear headings, readable body text</td>
+        <td>Bold headlines with refined body text</td>
+      </tr>
+      <tr>
+        <td>Tone</td>
+        <td>Informative and technical</td>
+        <td>Inspirational and design-focused</td>
+      </tr>
+    </table>
 
-      <ul>
-        <li><strong><a href="https://bionitlabs.com/" target="_blank" rel="noopener noreferrer">BionIT Labs</a></strong> – Italian-based company known for Adam’s Hand, a fully adaptive bionic prosthesis.</li>
-        <li><strong><a href="https://www.covvi.com/" target="_blank" rel="noopener noreferrer">Covvi</a></strong> – UK-based company offering customizable bionic hands with a strong emphasis on design and user empowerment.</li>
-      </ul>
-    </section>
+    <div class="highlight">
+      BionIT Labs prioritizes clarity and function, ideal for clinical audiences.
+    </div>
+    <div class="highlight">
+      Covvi uses typography to elevate brand identity, appealing to users who value aesthetics and personalization.
+    </div>
+  </section>
 
-    <!-- Color Theory Section -->
-    <section id="color" class="showcase-section">
-      <h2>Color Theory Comparison</h2>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Feature</th>
-            <th>BionIT Labs</th>
-            <th>Covvi</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Primary Palette</td>
-            <td>Deep blues, white, and black</td>
-            <td>Black, white, and gold accents</td>
-          </tr>
-          <tr>
-            <td>Color Psychology</td>
-            <td>Blue evokes trust, tech-savvy professionalism</td>
-            <td>Black and gold suggest luxury, precision, and boldness</td>
-          </tr>
-          <tr>
-            <td>Contrast & Accessibility</td>
-            <td>Strong contrast; readable and clean</td>
-            <td>High contrast with elegant whitespace</td>
-          </tr>
-          <tr>
-            <td>Emotional Tone</td>
-            <td>Calm, clinical, confident</td>
-            <td>Sleek, aspirational, premium</td>
-          </tr>
-        </tbody>
-      </table>
+  <!-- Summary Section -->
+  <section id="summary" class="showcase-section">
+    <h2>Summary Insights</h2>
 
-      <div class="highlight">
-        BionIT Labs uses a calm, monochromatic palette that reinforces its technical credibility and medical focus.
-      </div>
-      <div class="highlight">
-        Covvi leans into a luxury aesthetic, using black and gold to position its product as both functional and fashionable.
-      </div>
-    </section>
+    <table class="summary-table">
+      <tr>
+        <th>Insight</th>
+        <th>Application</th>
+      </tr>
+      <tr>
+        <td>Color sets emotional tone</td>
+        <td>BionIT = trust & tech; Covvi = luxury & empowerment</td>
+      </tr>
+      <tr>
+        <td>Typography guides perception</td>
+        <td>BionIT = clarity; Covvi = elegance</td>
+      </tr>
+      <tr>
+        <td>Whitespace enhances focus</td>
+        <td>Both use it well, but Covvi’s layout feels more curated</td>
+      </tr>
+    </table>
+  </section>
 
-    <!-- Typography Section -->
-    <section id="type" class="showcase-section">
-      <h2>Typography Comparison</h2>
+</main>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Feature</th>
-            <th>BionIT Labs</th>
-            <th>Covvi</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Font Style</td>
-            <td>Sans-serif, modern, clean</td>
-            <td>Serif + sans-serif mix; elegant and structured</td>
-          </tr>
-          <tr>
-            <td>Hierarchy</td>
-            <td>Clear headings, readable body text</td>
-            <td>Bold headlines with refined body text</td>
-          </tr>
-          <tr>
-            <td>Tone</td>
-            <td>Informative and technical</td>
-            <td>Inspirational and design-focused</td>
-          </tr>
-        </tbody>
-      </table>
 
-      <div class="highlight">
-        BionIT Labs prioritizes clarity and function, ideal for clinical audiences.
-      </div>
-      <div class="highlight">
-        Covvi uses typography to elevate brand identity, appealing to users who value aesthetics and personalization.
-      </div>
-    </section>
+<!-- Floating Back to Top Button -->
+<button id="backToTop" class="back-to-top" onclick="scrollToTop()">↑</button>
 
-    <!-- Summary Section -->
-    <section id="summary" class="showcase-section">
-      <h2>Summary Insights</h2>
 
-      <table class="summary-table">
-        <thead>
-          <tr>
-            <th>Insight</th>
-            <th>Application</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Color sets emotional tone</td>
-            <td>BionIT = trust & tech; Covvi = luxury & empowerment</td>
-          </tr>
-          <tr>
-            <td>Typography guides perception</td>
-            <td>BionIT = clarity; Covvi = elegance</td>
-          </tr>
-          <tr>
-            <td>Whitespace enhances focus</td>
-            <td>Both use it well, but Covvi’s layout feels more curated</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-  </main>
-
-  <!-- Back to Top Button -->
-  <button id="backToTop" class="back-to-top" onclick="scrollToTop()">↑</button>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p>Created by Jacqueline Valdez • Portfolio Showcase Project</p>
-    <p>Color & Typography Analysis • Web Design Coursework</p>
-  </footer>
+<!-- Footer -->
+<footer class="site-footer">
+  <p>Created by Jacqueline Valdez • Portfolio Showcase Project</p>
+  <p>Color & Typography Analysis • Web Design Coursework</p>
+</footer>
 
 </body>
 </html>

@@ -135,4 +135,19 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding: 2.5
+    padding: 2.5rem 1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .interactive-table {
+    font-size: 0.9rem;
+  }
+
+  .showcase-section p,
+  .showcase-section ul {
+    font-size: 0.95rem;
+  }
+}

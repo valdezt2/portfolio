@@ -1,6 +1,12 @@
-/* ----------------------------------------------------
+ /* ----------------------------------------------------
    GLOBAL + DARK MODE
 ---------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -191,7 +197,8 @@ table {
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-th, td {
+th,
+td {
   padding: 0.85rem 1rem;
   border: 1px solid #b8c6d1;
   text-align: left;
@@ -246,4 +253,5 @@ th {
   padding: 2rem 1rem;
   margin-top: 4rem;
   font-size: 0.9rem;
-  line-height: 1.
+  line-height: 1.6;
+}

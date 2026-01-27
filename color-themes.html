@@ -4,83 +4,108 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Color Theme Showcase</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 2rem;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 1rem;
-      text-align: center;
-    }
-    th {
-      background-color: #004080;
-      color: white;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      border: 1px solid #999;
-    }
-    caption {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      font-weight: bold;
-      color: #004080;
-    }
-  </style>
+
+  <!-- Unified Styles -->
+  <link rel="stylesheet" href="sitewide.css">
+  <link rel="stylesheet" href="color-theme-showcase.css">
 </head>
+
 <body>
-  <table>
-    <caption>Color Theme Showcase</caption>
-    <thead>
-      <tr>
-        <th>Theme Name</th>
-        <th>Color Palette</th>
-        <th>Photoshop Image</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Serene Blue</td>
-        <td style="background: linear-gradient(to right, #cce5ff, #99ccff, #6699cc);"></td>
-        <td><img src="serene-blue.jpg" alt="Serene Blue Photoshop design" /></td>
-        <td>Cool tones for medical or tech-focused layouts. Evokes calm and trust.</td>
-      </tr>
-      <tr>
-        <td>Sunset Glow</td>
-        <td style="background: linear-gradient(to right, #ffcc99, #ff9966, #cc6666);"></td>
-        <td><img src="sunset-glow.jpg" alt="Sunset Glow Photoshop design" /></td>
-        <td>Warm, emotional palette ideal for childcare or wellness branding.</td>
-      </tr>
-      <tr>
-        <td>Forest Calm</td>
-        <td style="background: linear-gradient(to right, #d4eac7, #a3c9a8, #6b8e6b);"></td>
-        <td><img src="forest-calm.jpg" alt="Forest Calm Photoshop design" /></td>
-        <td>Earthy greens for nature-inspired or therapeutic themes.</td>
-      </tr>
-      <tr>
-        <td>Vibrant Pulse</td>
-        <td style="background: linear-gradient(to right, #ff6699, #cc3399, #660066);"></td>
-        <td><img src="vibrant-pulse.jpg" alt="Vibrant Pulse Photoshop design" /></td>
-        <td>High-energy palette for youth, innovation, or fashion-forward projects.</td>
-      </tr>
-      <tr>
-        <td>Minimal Slate</td>
-        <td style="background: linear-gradient(to right, #eeeeee, #cccccc, #666666);"></td>
-        <td><img src="minimal-slate.jpg" alt="Minimal Slate Photoshop design" /></td>
-        <td>Neutral tones for professional, minimalist, or editorial layouts.</td>
-      </tr>
-    </tbody>
-  </table>
+
+  <!-- Main Navigation -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="color-theory.html">Color Theory Showcase</a></li>
+      <li><a href="typography-showcase.html">Typography Showcase</a></li>
+      <li><a href="magazine-cover.html">Magazine Cover</a></li>
+      <li><a href="photo-restoration.html">Photo Restoration</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+    <h1>Color Theme Showcase</h1>
+
+    <!-- Light/Dark Mode Toggle -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+      🌙
+    </button>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h2>Exploring Color Palettes in Visual Design</h2>
+    <p>A curated comparison of color themes and their emotional impact.</p>
+  </section>
+
+  <!-- Main Content -->
+  <main class="content-wrapper">
+
+    <section class="showcase-section">
+      <h2>Color Theme Showcase</h2>
+
+      <table class="interactive-table">
+        <thead>
+          <tr>
+            <th>Theme Name</th>
+            <th>Color Palette</th>
+            <th>Photoshop Image</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Serene Blue</td>
+            <td class="palette serene-blue"></td>
+            <td><img src="serene-blue.jpg" alt="Serene Blue Photoshop design"></td>
+            <td>Cool tones for medical or tech-focused layouts. Evokes calm and trust.</td>
+          </tr>
+
+          <tr>
+            <td>Sunset Glow</td>
+            <td class="palette sunset-glow"></td>
+            <td><img src="sunset-glow.jpg" alt="Sunset Glow Photoshop design"></td>
+            <td>Warm, emotional palette ideal for childcare or wellness branding.</td>
+          </tr>
+
+          <tr>
+            <td>Forest Calm</td>
+            <td class="palette forest-calm"></td>
+            <td><img src="forest-calm.jpg" alt="Forest Calm Photoshop design"></td>
+            <td>Earthy greens for nature-inspired or therapeutic themes.</td>
+          </tr>
+
+          <tr>
+            <td>Vibrant Pulse</td>
+            <td class="palette vibrant-pulse"></td>
+            <td><img src="vibrant-pulse.jpg" alt="Vibrant Pulse Photoshop design"></td>
+            <td>High-energy palette for youth, innovation, or fashion-forward projects.</td>
+          </tr>
+
+          <tr>
+            <td>Minimal Slate</td>
+            <td class="palette minimal-slate"></td>
+            <td><img src="minimal-slate.jpg" alt="Minimal Slate Photoshop design"></td>
+            <td>Neutral tones for professional, minimalist, or editorial layouts.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" onclick="scrollToTop()">↑</button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>Created by Jacqueline Valdez • Portfolio Showcase Project</p>
+    <p>Color Theme Exploration • Web Design Coursework</p>
+  </footer>
+
 </body>
 </html>

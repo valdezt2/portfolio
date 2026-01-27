@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jacqueline Valdez | Clinical Education Specialist</title>
+
+  <!-- Unified Styles -->
   <link rel="stylesheet" href="sitewide.css">
+  <link rel="stylesheet" href="homepage.css">
 </head>
 
 <body>
@@ -14,11 +17,8 @@
     <ul>
       <li><a href="index.html">Home</a></li>
 
-      <!-- Dropdown Parent -->
       <li class="dropdown">
         <a href="color-theory.html" class="dropdown-toggle">Color Theory ▾</a>
-
-        <!-- Dropdown Menu -->
         <ul class="dropdown-menu">
           <li><a href="color-theory.html">Color Theory Showcase</a></li>
           <li><a href="color-theme-showcase.html">Color Themes</a></li>
@@ -34,73 +34,104 @@
     </ul>
   </nav>
 
-  <!-- Header -->
-  <header>
-    <img src="jackie.jpg" width="280" height="400" alt="Portrait of Jacqueline Valdez">
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+    <h1>Jacqueline Valdez, M.Ed., CO, BOCP, FAAOP</h1>
 
-    <h2>Jacqueline Valdez, M.Ed. CO, BOCP, FAAOP</h2>
-    <p><strong>Clinical Education Specialist | Orthotics & Prosthetics</strong></p>
-
-    <h1>Jackie's Web Design Portfolio</h1>
-
-    <p>
-      <a href="https://www.linkedin.com/in/jackie-valdez-co-bocp-faaop/"
-         target="_blank" rel="noopener noreferrer">
-        LinkedIn Profile
-      </a>
-    </p>
+    <!-- Light/Dark Mode Toggle -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+      🌙
+    </button>
   </header>
 
-  <!-- About Section -->
-  <section>
-    <h2>About</h2>
-    <p>Jacqueline is a Certified Orthotist/Prosthetist and Clinical Education Specialist with over 20 years of experience in advancing global standards in orthopedic, prosthetic, and orthotic care. She excels in public relations, project management, e-learning, and program development—enhancing practitioner skills and patient outcomes through innovative training solutions.</p>
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h2>Clinical Education Specialist & Web Designer</h2>
+    <p>Advancing global standards in Orthotics & Prosthetics through education, innovation, and design.</p>
   </section>
 
-  <!-- Experience Section -->
-  <section>
-    <h2>Experience</h2>
-    <ul>
-      <li><strong>Clinical Education Specialist</strong> – Ottobock (2022–Present)</li>
-      <li><strong>Clinical Education Specialist</strong> – Fillauer Companies (2017–2022)</li>
-      <li><strong>Clinical Specialist</strong> – Endolite US (2016–2017)</li>
-      <li><strong>Director of O&P Education</strong> – Trulife (2012–2016)</li>
-    </ul>
-  </section>
+  <!-- Main Content -->
+  <main class="content-wrapper">
 
-  <!-- Education Section -->
-  <section>
-    <h2>Education</h2>
-    <ul>
-      <li><strong>M.Ed.</strong> – American College of Education (Integrated Sciences & Online Teaching)</li>
-      <li><strong>B.S.</strong> – University of New Mexico (Sports Medicine)</li>
-      <li><strong>Associate Degree</strong> – Century College Orthotics and Prosthetics</li>
-    </ul>
-  </section>
+    <!-- Profile Card -->
+    <section class="showcase-section profile-card">
+      <img src="jackie.jpg" alt="Portrait of Jacqueline Valdez" class="profile-photo">
 
-  <!-- Certifications Section -->
-  <section>
-    <h2>Certifications</h2>
-    <ul>
-      <li>Certified Orthotist (CO)</li>
-      <li>Board Certified Prosthetist (BOCP)</li>
-      <li>Fellow of the Academy of Orthotics and Prosthetics (FAAOP)</li>
-      <li>Certified Medical Billing and Coding</li>
-      <li>Web Design (in Progress)</li>
-    </ul>
-  </section>
+      <div class="profile-text">
+        <h2>Welcome to My Portfolio</h2>
+        <p>
+          I am a Certified Orthotist/Prosthetist and Clinical Education Specialist with over 20 years of experience in advancing global standards in orthopedic, prosthetic, and orthotic care. My work focuses on practitioner training, curriculum development, international education, and innovative digital learning solutions.
+        </p>
 
-  <!-- Skills Section -->
-  <section>
-    <h2>Skills</h2>
-    <p>Orthopedics, Prosthetics, Educational Leadership, Technical Writing, Program Development, Public Speaking, Clinical Training</p>
-  </section>
+        <div class="highlight">
+          This portfolio showcases my work in web design, visual communication, and digital media — blending clinical expertise with modern design principles.
+        </div>
+
+        <p>
+          Connect with me on  
+          <a href="https://www.linkedin.com/in/jackie-valdez-co-bocp-faaop/" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="showcase-section">
+      <h2>About</h2>
+      <p>
+        Jacqueline is a Certified Orthotist/Prosthetist and Clinical Education Specialist with over 20 years of experience in advancing global standards in orthopedic, prosthetic, and orthotic care. She excels in public relations, project management, e-learning, and program development—enhancing practitioner skills and patient outcomes through innovative training solutions.
+      </p>
+    </section>
+
+    <!-- Experience -->
+    <section class="showcase-section">
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Clinical Education Specialist</strong> – Ottobock (2022–Present)</li>
+        <li><strong>Clinical Education Specialist</strong> – Fillauer Companies (2017–2022)</li>
+        <li><strong>Clinical Specialist</strong> – Endolite US (2016–2017)</li>
+        <li><strong>Director of O&P Education</strong> – Trulife (2012–2016)</li>
+      </ul>
+    </section>
+
+    <!-- Education -->
+    <section class="showcase-section">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>M.Ed.</strong> – American College of Education (Integrated Sciences & Online Teaching)</li>
+        <li><strong>B.S.</strong> – University of New Mexico (Sports Medicine)</li>
+        <li><strong>Associate Degree</strong> – Century College Orthotics and Prosthetics</li>
+      </ul>
+    </section>
+
+    <!-- Certifications -->
+    <section class="showcase-section">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Certified Orthotist (CO)</li>
+        <li>Board Certified Prosthetist (BOCP)</li>
+        <li>Fellow of the Academy of Orthotics and Prosthetics (FAAOP)</li>
+        <li>Certified Medical Billing and Coding</li>
+        <li>Web Design (in Progress)</li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section class="showcase-section">
+      <h2>Skills</h2>
+      <p>
+        Orthopedics, Prosthetics, Educational Leadership, Technical Writing, Program Development, Public Speaking,
+        Clinical Training, Curriculum Design, International Education, Digital Learning Tools
+      </p>
+    </section>
+
+  </main>
 
   <!-- Footer -->
-  <footer>
-    <p><small>Disclosure: This is not a real website.</small></p>
-    <hr>
-    <p>&copy; 2025 J Valdez. All rights reserved.</p>
+  <footer class="site-footer">
+    <p>&copy; 2025 Jacqueline Valdez. All rights reserved.</p>
   </footer>
 
 </body>

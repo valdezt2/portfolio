@@ -1,11 +1,10 @@
-/* ============================
-   COLOR SYSTEM
-============================ */
+/* ============================================
+   GLOBAL COLOR SYSTEM
+============================================ */
 :root {
-  /* Blue + Gray Palette */
   --blue-100: #e8f1fb;
   --blue-300: #8bb8e8;
-  --blue-500: #3a7bd5;   /* Primary accent */
+  --blue-500: #3a7bd5;
   --blue-700: #1f4e79;
   --blue-900: #102a43;
 
@@ -15,13 +14,11 @@
   --gray-700: #52606d;
   --gray-900: #1f2933;
 
-  /* Page Colors */
   --page-bg: var(--gray-100);
   --text-color: var(--gray-900);
   --card-bg: #ffffff;
   --border-color: var(--gray-300);
 
-  /* Accent Buttons / Links */
   --accent-dark: var(--blue-700);
   --accent-dark-hover: var(--blue-900);
 }
@@ -37,13 +34,20 @@ body.dark-mode {
   --accent-dark-hover: var(--blue-300);
 }
 
-/* ============================
-   GLOBAL STYLES
-============================ */
+/* ============================================
+   GLOBAL RESET + BASE STYLES
+============================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  margin: 2rem;
+  margin: 0;
+  padding: 2rem;
   background-color: var(--page-bg);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -74,15 +78,15 @@ img {
   transition: border-color 0.3s ease;
 }
 
-/* ============================
+/* ============================================
    LIGHT/DARK MODE TOGGLE
-============================ */
+============================================ */
 .theme-toggle {
   position: fixed;
   top: 1.2rem;
   right: 1.2rem;
   background: var(--accent-dark);
-  color: #458fcd;
+  color: #ffffff;
   border: none;
   padding: 0.6rem 0.9rem;
   border-radius: 50px;
@@ -98,9 +102,9 @@ img {
   transform: scale(1.05);
 }
 
-/* ============================
+/* ============================================
    BEFORE/AFTER SLIDER
-============================ */
+============================================ */
 .before-after-section {
   margin-top: 3rem;
   text-align: center;
@@ -128,6 +132,7 @@ img {
   width: 50%;
   overflow: hidden;
   height: 100%;
+  transition: width 0.25s ease;
 }
 
 .slider {
@@ -136,9 +141,9 @@ img {
   cursor: pointer;
 }
 
-/* ============================
+/* ============================================
    RESPONSIVE GRID LAYOUT
-============================ */
+============================================ */
 .grid-showcase {
   margin-top: 3rem;
   text-align: center;
@@ -163,9 +168,9 @@ img {
   transform: translateY(-5px);
 }
 
-/* ============================
+/* ============================================
    RESTORATION GALLERY
-============================ */
+============================================ */
 .restoration-gallery {
   margin-top: 3rem;
   text-align: center;
@@ -182,7 +187,7 @@ img {
   width: 100%;
   border-radius: 6px;
   border: 1px solid var(--border-color);
-  box-shadow: 0 0 8px rgba(#458fcd);
+  box-shadow: 0 0 8px rgba(69, 143, 205, 0.4); /* corrected RGBA */
   transition: transform 0.2s ease, border-color 0.3s ease;
 }
 
@@ -190,9 +195,9 @@ img {
   transform: scale(1.03);
 }
 
-/* ============================
+/* ============================================
    DOWNLOAD BUTTON
-============================ */
+============================================ */
 .download-wrapper {
   text-align: center;
   margin-top: 1.5rem;
@@ -212,9 +217,9 @@ img {
   background: var(--accent-dark-hover);
 }
 
-/* ============================
+/* ============================================
    FOOTER
-============================ */
+============================================ */
 .site-footer {
   text-align: center;
   margin-top: 4rem;
@@ -224,4 +229,3 @@ img {
   border-top: 1px solid var(--border-color);
   transition: color 0.3s ease, border-color 0.3s ease;
 }
-

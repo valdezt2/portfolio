@@ -1,6 +1,6 @@
- /* ----------------------------------------------------
-   GLOBAL + DARK MODE
----------------------------------------------------- */
+/* ============================================
+   GLOBAL RESET + BASE STYLES
+============================================ */
 *,
 *::before,
 *::after {
@@ -17,6 +17,9 @@ body {
   transition: background 0.4s ease, color 0.4s ease;
 }
 
+/* ============================================
+   DARK MODE
+============================================ */
 body.dark-mode {
   background: #1a1a1a;
   color: #e6e6e6;
@@ -44,12 +47,43 @@ body.dark-mode .highlight {
   border-left-color: #66b2ff;
 }
 
-/* ----------------------------------------------------
-   STICKY HEADER
----------------------------------------------------- */
-.site-header {
+/* ============================================
+   MAIN NAVIGATION (Unified)
+============================================ */
+.main-nav {
+  background: #1e2a38;
+  padding: 12px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   position: sticky;
   top: 0;
+  z-index: 1000;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.main-nav a:hover {
+  color: #7ec8ff;
+  text-decoration: underline;
+}
+
+/* ============================================
+   STICKY PAGE HEADER (Showcase Pages)
+============================================ */
+.site-header {
   background: #003366;
   color: white;
   padding: 1rem 2rem;
@@ -57,7 +91,9 @@ body.dark-mode .highlight {
   align-items: center;
   gap: 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-  z-index: 1000;
+  position: sticky;
+  top: 0;
+  z-index: 900;
 }
 
 .site-header h1 {
@@ -74,6 +110,9 @@ body.dark-mode .highlight {
   cursor: pointer;
 }
 
+/* ============================================
+   THEME TOGGLE
+============================================ */
 .theme-toggle {
   margin-left: auto;
   font-size: 1.3rem;
@@ -90,9 +129,9 @@ body.dark-mode .highlight {
   background: #0066cc;
 }
 
-/* ----------------------------------------------------
+/* ============================================
    SIDE NAVIGATION PANEL
----------------------------------------------------- */
+============================================ */
 .side-nav {
   position: fixed;
   left: -260px;
@@ -133,9 +172,9 @@ body.dark-mode .highlight {
   cursor: pointer;
 }
 
-/* ----------------------------------------------------
+/* ============================================
    HERO BANNER
----------------------------------------------------- */
+============================================ */
 .hero {
   background: linear-gradient(to right, #004080, #0066cc);
   color: white;
@@ -155,9 +194,9 @@ body.dark-mode .highlight {
   margin: 0 auto;
 }
 
-/* ----------------------------------------------------
+/* ============================================
    CONTENT WRAPPER
----------------------------------------------------- */
+============================================ */
 .content-wrapper {
   max-width: 1100px;
   margin: 2rem auto;
@@ -174,9 +213,9 @@ body.dark-mode .highlight {
   margin-bottom: 1rem;
 }
 
-/* ----------------------------------------------------
+/* ============================================
    HIGHLIGHT BOXES
----------------------------------------------------- */
+============================================ */
 .highlight {
   background-color: #d9eaf7;
   border-left: 6px solid #007acc;
@@ -186,9 +225,9 @@ body.dark-mode .highlight {
   font-weight: bold;
 }
 
-/* ----------------------------------------------------
+/* ============================================
    TABLES
----------------------------------------------------- */
+============================================ */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -214,9 +253,9 @@ th {
   vertical-align: top;
 }
 
-/* ----------------------------------------------------
+/* ============================================
    BACK TO TOP BUTTON
----------------------------------------------------- */
+============================================ */
 .back-to-top {
   position: fixed;
   bottom: 30px;
@@ -243,9 +282,9 @@ th {
   background: #0066cc;
 }
 
-/* ----------------------------------------------------
-   FOOTER
----------------------------------------------------- */
+/* ============================================
+   FOOTER (Unified)
+============================================ */
 .site-footer {
   background: #003366;
   color: white;

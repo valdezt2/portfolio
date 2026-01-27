@@ -4,92 +4,139 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gaining a Better Understanding of Typography</title>
-  <style>
-    body {
-      font-family: 'Georgia', serif;
-      margin: 2rem;
-      line-height: 1.6;
-      color: #333;
-      background-color: #fdfdfd;
-    }
-    h1, h2 {
-      color: #004080;
-    }
-    h2 {
-      margin-top: 2rem;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    strong {
-      color: #004080;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-  </style>
+
+  <!-- Unified Styles -->
+  <link rel="stylesheet" href="sitewide.css">
+  <link rel="stylesheet" href="typography-understanding.css">
 </head>
+
 <body>
-  <header>
+
+  <!-- Main Navigation -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+
+      <!-- Dropdown Parent -->
+      <li class="dropdown">
+        <a href="color-theory.html" class="dropdown-toggle">Color Theory ▾</a>
+
+        <ul class="dropdown-menu">
+          <li><a href="color-theory.html">Color Theory Showcase</a></li>
+          <li><a href="color-theme-showcase.html">Color Themes</a></li>
+          <li><a href="color-theory-overview.html">Color Theory Overview</a></li>
+          <li><a href="color-theory-article.html">Color Theory Article</a></li>
+        </ul>
+      </li>
+
+      <li><a href="typography-showcase.html">Typography Showcase</a></li>
+      <li><a href="magazine-cover.html">Magazine Cover</a></li>
+      <li><a href="photo-restoration.html">Photo Restoration</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
     <h1>Gaining a Better Understanding of Typography</h1>
+
+    <!-- Light/Dark Mode Toggle -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+      🌙
+    </button>
   </header>
 
-  <section>
-    <p>
-      Typography goes beyond merely picking a visually appealing font; it serves as the foundational structure of language. Each letterform is thoughtfully designed, and gaining a solid understanding of its anatomy can significantly enhance the work of designers, educators, and communicators. By mastering these elements, you can create text that is not only readable and expressive but also visually harmonious. Embracing this knowledge can enhance your ability to communicate effectively in writing.
-    </p>
-    <p>
-      Let’s look at the essential elements that shape the way type functions on the page. Understanding these structural guidelines can significantly enhance your typographic design.
-    </p>
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h2>The Anatomy of Type</h2>
+    <p>Understanding the structure behind letterforms strengthens clarity, communication, and design precision.</p>
   </section>
 
-  <nav>
-  <ul>
-        <li><a href="font-types-article.html">Font Types Article</a></li>
-        <li><a href="typography-article.html">Typography Article</a></li>
+  <!-- Main Content -->
+  <main class="content-wrapper">
+
+    <!-- Intro -->
+    <section class="showcase-section">
+      <div class="highlight">
+        Typography is the architecture of written language — every stroke, curve, and proportion is intentional.
+      </div>
+
+      <p>
+        Typography goes beyond choosing a visually appealing font; it forms the structural foundation of communication.
+        Each letterform is carefully crafted, and understanding its anatomy helps designers, educators, and communicators
+        create text that is readable, expressive, and visually harmonious.
+      </p>
+
+      <p>
+        Let’s explore the essential elements that shape how type functions on the page.
+      </p>
+    </section>
+
+    <!-- Structural Guidelines -->
+    <section class="showcase-section">
+      <h2>Structural Guidelines</h2>
+
+      <ul>
+        <li><strong>Baseline:</strong> The invisible line on which most characters sit, anchoring alignment.</li>
+        <li><strong>X-Height:</strong> Based on the height of the lowercase “x,” influencing readability and visual balance.</li>
+        <li><strong>Cap Height:</strong> The height of uppercase letters measured from the baseline.</li>
+        <li><strong>Ascender Line:</strong> Marks the top of ascenders such as “b,” “d,” and “h.”</li>
+        <li><strong>Descender Line:</strong> Defines the lowest point of descenders like “g,” “p,” and “y.”</li>
       </ul>
-    </li>
-  </ul>
-</nav>
 
-  <section>
-    <h2>Structural Guidelines</h2>
-    <ul>
-      <li><strong>Baseline:</strong> Think of this as the foundation for most characters. It serves as the invisible anchor that ensures consistent alignment within a line of text, providing a reliable reference point for measuring various typographic dimensions.</li>
-      <li><strong>Height:</strong> This measurement, based on the height of the lowercase “x,” is crucial as it influences the visual perception of lowercase letters. Opting for a larger x-height can improve readability, particularly in body text.</li>
-      <li><strong>Cap Height:</strong> This indicator denotes the top of uppercase letters, measured from the baseline. It plays a vital role in aligning capital letters with other design elements.</li>
-      <li><strong>Ascender Line:</strong> This line defines the upper boundary for ascenders—those parts of lowercase letters like “b” and “d” that extend beyond the x-height.</li>
-      <li><strong>Descender Line:</strong> This line establishes the lower boundary for descenders—strokes that dip below the baseline, as seen in letters like “g,” “p,” and “y.”</li>
-    </ul>
-    <p>By mastering these elements, you can create typography that is more effective and visually appealing, resonating with your audience.</p>
-  </section>
+      <p>
+        Mastering these elements helps create typography that is visually consistent and easier for readers to process.
+      </p>
+    </section>
 
-  <section>
-    <h2>Stroke Anatomy</h2>
-    <ul>
-      <li><strong>Stem:</strong> The primary vertical or diagonal stroke in a letterform. It provides structural integrity, similar to a column in architecture.</li>
-      <li><strong>Arm:</strong> A horizontal or upward-slanting stroke that does not connect at one end. Arms can be found in letters like “T,” “E,” and “Y.”</li>
-      <li><strong>Loop:</strong> A closed or partially closed counter located at the bottom of letters like “g.” The shape of the loop can vary significantly across different typefaces.</li>
-      <li><strong>Terminal:</strong> The end of a stroke that lacks a serif. Terminals can be rounded, flat, or angled, adding personality and rhythm to the type.</li>
-    </ul>
-  </section>
+    <!-- Stroke Anatomy -->
+    <section class="showcase-section">
+      <h2>Stroke Anatomy</h2>
 
-  <section>
-    <h2>Serif and Style Details</h2>
-    <ul>
-      <li><strong>Serif:</strong> These small projections at the ends of strokes help guide the eye along lines of text. Serif fonts are often preferred for printed materials due to their readability over long passages.</li>
-      <li><strong>Bracket:</strong> The curved or angled connection between a serif and the primary stroke. Brackets soften the transition and contribute to the typeface’s overall style—whether classic, modern, or transitional.</li>
-    </ul>
-  </section>
+      <ul>
+        <li><strong>Stem:</strong> The main vertical or diagonal stroke that forms the backbone of many letters.</li>
+        <li><strong>Arm:</strong> A horizontal or upward-slanting stroke that is attached at only one end.</li>
+        <li><strong>Loop:</strong> A closed or partially closed counter, commonly seen in the lower-case “g.”</li>
+        <li><strong>Terminal:</strong> The end of a stroke without a serif — rounded, flat, or angled.</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Summary</h2>
-    <p>
-      Typography isn’t just decoration—it’s communication. Each of these elements affects how we perceive and process written language. Designers who understand the anatomy of type can make informed choices that enhance clarity, evoke emotion, and reinforce brand identity.
-    </p>
-    <p>
-      Whether you're setting type for a medical journal, a children's book, or a prosthetics training module, the nuances of typography shape how your message is received.
-    </p>
-  </section>
+    <!-- Serif & Style Details -->
+    <section class="showcase-section">
+      <h2>Serif and Style Details</h2>
+
+      <ul>
+        <li><strong>Serif:</strong> Small projections at the ends of strokes that guide the eye along lines of text.</li>
+        <li><strong>Bracket:</strong> The curved or angled connection between a serif and the main stroke.</li>
+      </ul>
+    </section>
+
+    <!-- Summary -->
+    <section class="showcase-section">
+      <h2>Summary</h2>
+
+      <div class="highlight">
+        Typography isn’t decoration — it’s communication. Structure shapes meaning.
+      </div>
+
+      <p>
+        Each typographic element influences how readers perceive and process written language. Designers who understand
+        the anatomy of type can make informed choices that enhance clarity, evoke emotion, and reinforce brand identity.
+      </p>
+
+      <p>
+        Whether you're designing for medical education, children’s books, or prosthetics training modules, the nuances
+        of typography shape how your message is received.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>Created by Jacqueline Valdez • Typography Anatomy Article • Web Design Coursework</p>
+  </footer>
+
 </body>
 </html>

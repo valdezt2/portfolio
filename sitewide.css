@@ -95,7 +95,7 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================
-   MOBILE NAV TOGGLE
+   MOBILE NAV TOGGLE (Hidden on Desktop)
 ============================================ */
 .nav-toggle {
   display: none;
@@ -121,32 +121,41 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================
-   HEADER (Used on Index + Resume)
+   SITE HEADER (New Homepage Header)
 ============================================ */
-header {
+.site-header {
   text-align: center;
   padding: 2rem 0;
   background-color: #e8f0fe;
   border-bottom: 2px solid #ccc;
+  position: relative;
 }
 
-header img {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.site-header h1 {
+  margin-bottom: 0.5rem;
 }
 
-header p a {
-  margin: 0 0.5rem;
-  text-decoration: none;
-  color: #0056b3;
+/* Dark Mode Toggle in Header */
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
 }
 
-header p a:hover {
-  text-decoration: underline;
+.theme-toggle:hover {
+  background: #001f4d;
 }
 
 /* ============================================
-   HERO BANNER (Used Across All Showcase Pages)
+   HERO BANNER (Used Across All Pages)
 ============================================ */
 .hero {
   background: linear-gradient(to right, #004080, #0066cc);

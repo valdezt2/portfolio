@@ -2,94 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Magazine Cover Project – Jacqueline Valdez</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project One – Old Photo Restoration</title>
 
-  <!-- Global sitewide styles -->
   <link rel="stylesheet" href="sitewide.css">
-
-  <!-- Page‑specific styles -->
-  <link rel="stylesheet" href="magazine-cover.css">
+  <link rel="stylesheet" href="showcase.css">
 </head>
 
 <body>
 
-  <!-- Main Navigation -->
-  <nav class="main-nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
+<!-- TOP NAVIGATION WITH DROPDOWN -->
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
 
-      <!-- Dropdown Parent -->
-      <li class="dropdown">
-        <a href="color-theory.html" class="dropdown-toggle">Color Theory ▾</a>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle">Showcases ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="color-theory.html">Color Theory Showcase</a></li>
+        <li><a href="typography-showcase.html">Typography Showcase</a></li>
+        <li><a href="magazine cover with showcase css.html">Magazine Cover Project</a></li>
+        <li><a href="photo-restoration.html">Photo Restoration</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
-        <!-- Dropdown Menu -->
-        <ul class="dropdown-menu">
-          <li><a href="color-theory.html">Color Theory Showcase</a></li>
-          <li><a href="color-theme-showcase.html">Color Themes</a></li>
-          <li><a href="color-theory-overview.html">Color Theory Overview</a></li>
-          <li><a href="color-theory-article.html">Color Theory Article</a></li>
-        </ul>
-      </li>
 
-      <li><a href="typography-showcase.html">Typography Showcase</a></li>
-      <li><a href="magazine-cover.html">Magazine Cover</a></li>
-      <li><a href="photo-restoration.html">Photo Restoration</a></li>
-      <li><a href="resume.html">Resume</a></li>
-    </ul>
-  </nav>
+<div class="content">
+  <h1>Project One – Old Photo Restoration</h1>
 
-  <!-- Header -->
-  <header class="site-header">
-    <h1>Magazine Cover Design Project</h1>
-    <h2>By: Jacqueline Valdez</h2>
-  </header>
+  <!-- Before/After Slider -->
+  <section class="before-after-section">
+    <h2>Before & After Restoration</h2>
 
-  <!-- Main Content -->
-  <main class="content-wrapper">
+    <div class="before-after-container">
+      <img src="before.jpg" alt="Original photo" class="before-img">
 
-    <section>
-      <img 
-        src="magazine-cover.jpg" 
-        alt="Magazine cover titled 'Robotics Today' featuring a robotic hand reaching toward a human hand through glass"
-      />
-    </section>
+      <div class="after-img-wrapper">
+        <img src="after.jpg" alt="Restored photo" class="after-img">
+      </div>
 
-    <div class="highlight">
-      Featured Topic: Understanding Upper Limb Disabilities
+      <input type="range" min="0" max="100" value="50" class="slider" id="sliderControl">
     </div>
+  </section>
 
-    <section>
-      <h2>Design Reflection</h2>
+  <!-- Download Button -->
+  <div class="download-wrapper">
+    <a href="after.jpg" download class="download-btn">Download Restored Image</a>
+  </div>
 
-      <p>
-        Starting this project was particularly challenging because my Adobe Photoshop froze and would not allow me to open a new project. I attempted several solutions, including shutting down my computer, ending the Photoshop task, and even uninstalling and reinstalling the software, but none worked. After several hours of troubleshooting, I decided to open a course assignment I had previously completed while designing a postcard. I deleted the layers from that project and used the file as the foundation for my new magazine cover.
-      </p>
+  <!-- Process Highlights -->
+  <section class="grid-showcase">
+    <h2>Restoration Process Highlights</h2>
 
-      <p>
-        To begin, I adjusted the canvas size to 21 x 29.7 cm with a resolution of 300, which is the recommended size for a magazine cover. I utilized guides to ensure that my design remained within the working space. I selected a photo I had previously used in another project and, as a novice, I experimented with the hues, curves, brightness, and neural filters, choosing the colors I found most appealing.
-      </p>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h3>Healing Tools</h3>
+        <p>Healing Brush, Patch Tool, Spot Healing Brush.</p>
+      </div>
 
-      <p>
-        Next, I researched fonts commonly used for magazine covers and decided to use Soltis Serif for the title. I experimented with different color variations and effects, such as beveling, embossing, shadows, and color overlays. For the remaining text, I chose Gil Sans, the font I had previously used in my earlier designs. To enhance the main message of the cover, I applied effects like drop shadows, giving the text a more three-dimensional appearance.
-      </p>
+      <div class="grid-item">
+        <h3>Color & Tone</h3>
+        <p>Curves, contrast adjustments, noise reduction.</p>
+      </div>
 
-      <p>
-        If this were a project for a company, I would include more details regarding the content of the magazine. However, I would avoid adding excessive text, as this can make the cover appear cluttered. Covers of research or medical magazines are often designed to be thought-provoking.
-      </p>
-    </section>
+      <div class="grid-item">
+        <h3>Neural Filters</h3>
+        <p>Face smoothing and color enhancement.</p>
+      </div>
 
-  </main>
+      <div class="grid-item">
+        <h3>Final Touches</h3>
+        <p>Dodge & Burn, sharpening, background cleanup.</p>
+      </div>
+    </div>
+  </section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p>
-      Learn more at  
-      <a href="https://www.linkedin.com/company/bionitlabs/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
-        BionIT Labs on LinkedIn
-      </a>
-    </p>
-  </footer>
+  <!-- Reflection Section -->
+  <section>
+    <p>As a novice in Photoshop, I set out to restore an old Civil War photograph, experimenting with various tools to achieve the best results. My first step was to select an old photo of a young man taken after the Civil War. Since I work in the field of prosthetics, I chose this photo for restoration as it represents the type of images we commonly encounter in our offices and prosthetic labs.</p>
+
+    <p>To begin with, I duplicated the photo because Photoshop operates destructively. I opened a new layer panel and titled this layer "Restore." Next, I cropped and straightened the image using the cropping tool to remove the damaged borders.</p>
+
+    <p>During the process, I adjusted the tone and contrast to create a more balanced, vivid image. Recognizing the boy as my focal point, I meticulously removed scratches and blemishes from his face, ensuring that viewers' attention would be drawn directly to him. As this was where I wanted the viewers to focus, I removed the old drape hanging to the left of the image, which was a distraction from the design.</p>
+
+    <p>To refine the young man's features, I employed a combination of healing tools, including the Healing Brush Tool, Patch Tool, and Spot Healing Brush. Each tool served a distinct purpose: the Healing Brush allowed me to blend textures seamlessly, while the Patch Tool was invaluable for larger areas requiring detailed repair. The Spot Healing Brush proved effective for quick touch-ups on minor imperfections.</p>
+
+    <p>Throughout this restoration process, I used several filters to reduce noise, resulting in a more polished final image. Additionally, I applied curve adjustments to clarify the tonal range and enhance the exposure, ultimately bringing out the colors and details that had faded over time. I also opted to keep the background with lights and shadows, since this is still meant to be an old photograph taken on a background with imperfections.</p>
+
+    <p>As I navigated these adjustments, I explored various tools and techniques, trying different approaches even though I often found myself undoing many of the changes. I experimented with the Dodge and Burn tools to control the lighting and shadows, alongside the Sharpen tool, which aimed to add clarity to the final picture.</p>
+
+    <p>One of the highlights of my restoration journey was using the Neural Filter, which I found particularly effective in smoothing the young man’s face while also enriching the overall colorization of the image. This filter provided stunning results that truly brought the photograph to life, reinforcing my belief in the capabilities of modern editing software. Overall, this experience has given me a valuable foundation in photo restoration and an appreciation for the intricate tools at my disposal.</p>
+
+    <p>While restoring this old photo, I used many YouTube tutorials and the course instructions. In doing so, I found that there are many different ways to restore old pictures, not all of which are alike. It seems that, with the numerous tools available in Photoshop, everyone uses the ones they prefer. Additionally, the completed restoration is determined based on what is acceptable to the designer and their stakeholders.</p>
+  </section>
+
+</div>
+
+<footer class="site-footer">
+  <p><strong>Jacqueline Valdez</strong> • Web Design Professional Program • Project One</p>
+</footer>
+
+<!-- WORKING SLIDER SCRIPT -->
+<script>
+  const slider = document.getElementById("sliderControl");
+  const afterWrapper = document.querySelector(".after-img-wrapper");
+
+  slider.addEventListener("input", function () {
+    afterWrapper.style.width = slider.value + "%";
+  });
+</script>
 
 </body>
 </html>

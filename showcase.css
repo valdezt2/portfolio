@@ -1,10 +1,11 @@
-/* ============================================
-   GLOBAL COLOR SYSTEM
-============================================ */
+/* ============================
+   COLOR SYSTEM
+============================ */
 :root {
+  /* Blue + Gray Palette */
   --blue-100: #e8f1fb;
   --blue-300: #8bb8e8;
-  --blue-500: #3a7bd5;
+  --blue-500: #3a7bd5;   /* Primary accent */
   --blue-700: #1f4e79;
   --blue-900: #102a43;
 
@@ -14,11 +15,13 @@
   --gray-700: #52606d;
   --gray-900: #1f2933;
 
+  /* Page Colors */
   --page-bg: var(--gray-100);
   --text-color: var(--gray-900);
   --card-bg: #ffffff;
   --border-color: var(--gray-300);
 
+  /* Accent Buttons / Links */
   --accent-dark: var(--blue-700);
   --accent-dark-hover: var(--blue-900);
 }
@@ -34,20 +37,13 @@ body.dark-mode {
   --accent-dark-hover: var(--blue-300);
 }
 
-/* ============================================
-   GLOBAL RESET + BASE STYLES
-============================================ */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
+/* ============================
+   GLOBAL STYLES
+============================ */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  margin: 0;
-  padding: 2rem;
+  margin: 2rem;
   background-color: var(--page-bg);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -78,9 +74,9 @@ img {
   transition: border-color 0.3s ease;
 }
 
-/* ============================================
+/* ============================
    LIGHT/DARK MODE TOGGLE
-============================================ */
+============================ */
 .theme-toggle {
   position: fixed;
   top: 1.2rem;
@@ -102,9 +98,9 @@ img {
   transform: scale(1.05);
 }
 
-/* ============================================
+/* ============================
    BEFORE/AFTER SLIDER
-============================================ */
+============================ */
 .before-after-section {
   margin-top: 3rem;
   text-align: center;
@@ -129,10 +125,9 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  width: 50%; /* default matches slider */
   overflow: hidden;
   height: 100%;
-  transition: width 0.25s ease;
 }
 
 .slider {
@@ -141,9 +136,9 @@ img {
   cursor: pointer;
 }
 
-/* ============================================
+/* ============================
    RESPONSIVE GRID LAYOUT
-============================================ */
+============================ */
 .grid-showcase {
   margin-top: 3rem;
   text-align: center;
@@ -160,7 +155,7 @@ img {
   background: var(--card-bg);
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(135, 102, 226, 0.08);
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
   transition: transform 0.2s ease, background 0.3s ease;
 }
 
@@ -168,9 +163,9 @@ img {
   transform: translateY(-5px);
 }
 
-/* ============================================
+/* ============================
    RESTORATION GALLERY
-============================================ */
+============================ */
 .restoration-gallery {
   margin-top: 3rem;
   text-align: center;
@@ -187,7 +182,7 @@ img {
   width: 100%;
   border-radius: 6px;
   border: 1px solid var(--border-color);
-  box-shadow: 0 0 8px rgba(69, 143, 205, 0.4); /* corrected RGBA */
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
   transition: transform 0.2s ease, border-color 0.3s ease;
 }
 
@@ -195,9 +190,9 @@ img {
   transform: scale(1.03);
 }
 
-/* ============================================
+/* ============================
    DOWNLOAD BUTTON
-============================================ */
+============================ */
 .download-wrapper {
   text-align: center;
   margin-top: 1.5rem;
@@ -217,9 +212,9 @@ img {
   background: var(--accent-dark-hover);
 }
 
-/* ============================================
+/* ============================
    FOOTER
-============================================ */
+============================ */
 .site-footer {
   text-align: center;
   margin-top: 4rem;
@@ -228,4 +223,37 @@ img {
   font-size: 0.9rem;
   border-top: 1px solid var(--border-color);
   transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ============================
+   NAVIGATION (LOCAL OVERRIDE)
+============================ */
+.main-nav {
+  background: #1e2a38;
+  padding: 12px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.main-nav a:hover {
+  color: #7ec8ff;
+  text-decoration: underline;
 }

@@ -43,6 +43,12 @@
   margin-bottom: 1rem;
 }
 
+.showcase-section p,
+.showcase-section ul {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
 /* --------------------------------------------
    HIGHLIGHT BOXES
 -------------------------------------------- */
@@ -102,3 +108,31 @@
   font-weight: bold;
   background-color: #eef3f8;
 }
+
+/* --------------------------------------------
+   RESPONSIVE LAYOUT
+-------------------------------------------- */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .interactive-table th,
+  .interactive-table td {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+
+  .showcase-section p,
+  .showcase-section ul {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2.5

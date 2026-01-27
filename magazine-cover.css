@@ -2,6 +2,12 @@
    GLOBAL PAGE STYLING
 ============================================ */
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Gill Sans', sans-serif;
   margin: 0;

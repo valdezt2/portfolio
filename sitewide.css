@@ -1,60 +1,127 @@
+/* ============================================
+   GLOBAL RESET + BASE STYLES
+============================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 16px;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #fdfdfd;
+  color: #333;
+}
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0 1rem;
-      background-color: #fdfdfd;
-      color: #333;
-    }
+/* ============================================
+   MAIN NAVIGATION (Unified Across All Pages)
+============================================ */
+.main-nav {
+  background: #1e2a38;
+  padding: 12px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    header {
-      text-align: center;
-      padding: 2rem 0;
-      background-color: #e8f0fe;
-      border-bottom: 2px solid #ccc;
-    }
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
 
-    header img {
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
+.main-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
 
-    header h2 {
-      margin-top: 1rem;
-      font-size: 1.8rem;
-      color: #003366;
-    }
+.main-nav a:hover {
+  color: #7ec8ff;
+  text-decoration: underline;
+}
 
-    header p a {
-      margin: 0 0.5rem;
-      text-decoration: none;
-      color: #0056b3;
-    }
+/* ============================================
+   HEADER (Used on Index + Resume)
+============================================ */
+header {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #e8f0fe;
+  border-bottom: 2px solid #ccc;
+}
 
-    section {
-      margin: 2rem 0;
-    }
+header img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
-    section h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.5rem;
-      color: #003366;
-    }
+header h1,
+header h2 {
+  margin-top: 1rem;
+  color: #003366;
+}
 
-    ul {
-      padding-left: 1.5rem;
-    }
+header p a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #0056b3;
+}
 
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-      margin-top: 3rem;
-      padding: 1rem 0;
-      border-top: 1px solid #ccc;
-    }
+header p a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   CONTENT SECTIONS
+============================================ */
+section {
+  margin: 2rem 0;
+}
+
+section h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+  color: #003366;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+/* ============================================
+   FOOTER (Unified Across All Pages)
+============================================ */
+.site-footer,
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 3rem;
+  padding: 1rem 0;
+  border-top: 1px solid #ccc;
+}
+
+.site-footer a,
+footer a {
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-footer a:hover,
+footer a:hover {
+  text-decoration: underline;
+}

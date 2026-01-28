@@ -1,109 +1,166 @@
-/* ============================================
-   HERO BANNER
-============================================ */
-.hero {
-  background: linear-gradient(to right, #004080, #0066cc);
-  color: white;
-  padding: 4rem 2rem;
-  text-align: center;
+/* ==========================================================
+   COLOR & TYPOGRAPHY SYSTEM — Portfolio Showcase Styles
+   Used for: Color Theory, Color Themes, Typography Showcase
+========================================================== */
+
+/* ---------- ROOT COLOR VARIABLES ---------- */
+:root {
+  --blue-900: #003366;
+  --blue-700: #004c99;
+  --blue-500: #0066cc;
+  --blue-300: #7ec8ff;
+
+  --gray-900: #1e2a38;
+  --gray-700: #2f3d52;
+  --gray-500: #6b7a8f;
+  --gray-300: #b8c6d1;
+  --gray-100: #e6ecf2;
+
+  --white: #ffffff;
+  --black: #000000;
+
+  --accent: #007acc;
 }
 
-.hero h2 {
+/* ---------- DARK MODE SUPPORT ---------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: #e8e8e8;
+    --gray-100: #2a2a2a;
+    --gray-300: #444;
+    --gray-500: #888;
+    --gray-900: #111;
+    --blue-900: #7ec8ff;
+  }
+}
+
+/* ==========================================================
+   TYPOGRAPHY
+========================================================== */
+
+h1, h2, h3, h4 {
   font-family: 'Soltis Serif', serif;
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
+  color: var(--blue-900);
+  margin-top: 0;
 }
 
-.hero p {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto;
+p, li, td, th {
+  font-family: 'Gill Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--gray-900);
+  line-height: 1.6;
 }
 
-/* ============================================
-   CONTENT WRAPPER
-============================================ */
-.content-wrapper {
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 0 2rem;
-}
-
-.showcase-section {
-  margin-bottom: 3rem;
-}
-
+/* Section Titles */
 .showcase-section h2 {
   font-family: 'Soltis Serif', serif;
-  color: #003366;
+  font-size: 2rem;
+  color: var(--blue-900);
+  border-bottom: 3px solid var(--gray-300);
+  padding-bottom: 0.4rem;
   margin-bottom: 1rem;
 }
 
-/* ============================================
-   HIGHLIGHT BOXES
-============================================ */
-.highlight {
-  background-color: #d9eaf7;
-  border-left: 6px solid #007acc;
-  padding: 1rem 1.25rem;
-  margin: 1.5rem 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  font-weight: bold;
+/* ==========================================================
+   COLOR SWATCH GRID
+========================================================== */
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
 }
 
-/* ============================================
-   TABLES
-============================================ */
-table {
+.color-swatch {
+  border-radius: 8px;
+  padding: 1rem;
+  background: var(--gray-100);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.color-box {
+  width: 100%;
+  height: 90px;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--gray-300);
+}
+
+.color-label {
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  margin-top: 0.5rem;
+}
+
+/* ==========================================================
+   TYPE SPECIMENS
+========================================================== */
+
+.type-sample {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--gray-100);
+  border-left: 6px solid var(--blue-500);
+  border-radius: 4px;
+}
+
+.type-sample h3 {
+  font-family: 'Soltis Serif', serif;
+  color: var(--blue-700);
+  margin-bottom: 0.5rem;
+}
+
+.type-sample p {
+  font-size: 1.1rem;
+  color: var(--gray-900);
+}
+
+/* Font Weight Demo */
+.font-weights p {
+  margin: 0.4rem 0;
+}
+
+.weight-light { font-weight: 300; }
+.weight-regular { font-weight: 400; }
+.weight-medium { font-weight: 500; }
+.weight-semibold { font-weight: 600; }
+.weight-bold { font-weight: 700; }
+
+/* ==========================================================
+   COLOR VALUE TABLES
+========================================================== */
+
+.color-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #f4f8fc;
   margin: 1.5rem 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: var(--white);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-th,
-td {
-  padding: 0.85rem 1rem;
-  border: 1px solid #b8c6d1;
-  text-align: left;
-}
-
-th {
-  background-color: #004080;
-  color: white;
+.color-table th {
+  background: var(--blue-900);
+  color: var(--white);
+  padding: 0.75rem;
   font-family: 'Soltis Serif', serif;
 }
 
-.summary-table td {
-  vertical-align: top;
+.color-table td {
+  padding: 0.75rem;
+  border: 1px solid var(--gray-300);
 }
 
-/* ============================================
-   BACK TO TOP BUTTON
-============================================ */
-.back-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: #004c99;
-  color: white;
-  border: none;
-  padding: 0.7rem 1rem;
-  border-radius: 50%;
-  font-size: 1.3rem;
-  cursor: pointer;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 1500;
+.color-table tr:nth-child(even) {
+  background: var(--gray-100);
 }
 
-.back-to-top.visible {
-  opacity: 1;
-  pointer-events: auto;
-}
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
 
-.back-to-top:hover {
-  background: #0066cc;
+@media (max-width: 600px) {
+  .color-grid {
+    grid-template-columns: 1fr;
+  }
 }

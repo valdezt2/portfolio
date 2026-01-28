@@ -1,0 +1,268 @@
+/* ====================================================
+   GLOBAL + DARK MODE
+==================================================== */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', sans-serif;
+  background: linear-gradient(to bottom right, #e0e6ed, #cdd9e8);
+  color: #2c3e50;
+  line-height: 1.7;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode {
+  background: #1a1a1a;
+  color: #e6e6e6;
+}
+
+body.dark-mode .site-header {
+  background: #111;
+}
+
+body.dark-mode .hero {
+  background: linear-gradient(to right, #222, #444);
+}
+
+body.dark-mode table {
+  background: #2a2a2a;
+  color: #eee;
+}
+
+body.dark-mode th {
+  background: #003366;
+}
+
+body.dark-mode .highlight {
+  background: #333;
+  border-left-color: #66b2ff;
+}
+
+
+/* ====================================================
+   STICKY HEADER
+==================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #003366;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  z-index: 1000;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-family: 'Soltis Serif', serif;
+  font-size: 1.8rem;
+}
+
+.nav-toggle {
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.theme-toggle {
+  margin-left: auto;
+  font-size: 1.3rem;
+  background: #004c99;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: #0066cc;
+}
+
+
+/* ====================================================
+   SIDE NAVIGATION PANEL
+==================================================== */
+
+.side-nav {
+  position: fixed;
+  left: -260px;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  background: #003366;
+  color: white;
+  padding-top: 2rem;
+  transition: left 0.3s ease;
+  z-index: 2000;
+}
+
+.side-nav.open {
+  left: 0;
+}
+
+.side-nav a {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.side-nav a:hover {
+  background: #004c99;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* ====================================================
+   HERO BANNER
+==================================================== */
+
+.hero {
+  background: linear-gradient(to right, #004080, #0066cc);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-family: 'Soltis Serif', serif;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+/* ====================================================
+   CONTENT WRAPPER
+==================================================== */
+
+.content-wrapper {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.showcase-section {
+  margin-bottom: 3rem;
+}
+
+.showcase-section h2 {
+  font-family: 'Soltis Serif', serif;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+
+/* ====================================================
+   HIGHLIGHT BOXES
+==================================================== */
+
+.highlight {
+  background-color: #d9eaf7;
+  border-left: 6px solid #007acc;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-weight: bold;
+}
+
+
+/* ====================================================
+   TABLES
+==================================================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f4f8fc;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+th,
+td {
+  padding: 0.85rem 1rem;
+  border: 1px solid #b8c6d1;
+  text-align: left;
+}
+
+th {
+  background-color: #004080;
+  color: white;
+  font-family: 'Soltis Serif', serif;
+}
+
+.summary-table td {
+  vertical-align: top;
+}
+
+
+/* ====================================================
+   BACK TO TOP BUTTON
+==================================================== */
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #004c99;
+  color: white;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1500;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  background: #0066cc;
+}
+
+
+/* ====================================================
+   FOOTER
+==================================================== */
+
+.site-footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}

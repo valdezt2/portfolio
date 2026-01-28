@@ -23,7 +23,7 @@ body {
 ============================================ */
 h1, h2, h3, h4 {
   font-family: 'Soltis Serif', serif;
-  color: #003366;
+  color: #458fcd;
   margin-top: 0;
 }
 
@@ -95,7 +95,7 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================
-   MOBILE NAV TOGGLE (Hidden on Desktop)
+   MOBILE NAV TOGGLE
 ============================================ */
 .nav-toggle {
   display: none;
@@ -121,7 +121,7 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================
-   SITE HEADER (New Homepage Header)
+   SITE HEADER (Homepage Header)
 ============================================ */
 .site-header {
   text-align: center;
@@ -135,7 +135,7 @@ h1, h2, h3, h4 {
   margin-bottom: 0.5rem;
 }
 
-/* Dark Mode Toggle in Header */
+/* Dark Mode Toggle */
 .theme-toggle {
   position: absolute;
   top: 1rem;
@@ -155,7 +155,7 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================
-   HERO BANNER (Used Across All Pages)
+   HERO BANNER
 ============================================ */
 .hero {
   background: linear-gradient(to right, #004080, #0066cc);
@@ -241,7 +241,7 @@ section h2 {
 }
 
 /* ============================================
-   FOOTER (Unified Across All Pages)
+   FOOTER
 ============================================ */
 .site-footer,
 footer {
@@ -264,4 +264,3 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-

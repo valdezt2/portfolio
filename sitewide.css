@@ -1,0 +1,175 @@
+/* ============================================
+    GLOBAL RESET + MODERN BASE
+============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.7; 
+  background-color: #f2f2f2; 
+  color: #1e293b; 
+}
+
+/* ============================================
+    TYPOGRAPHY SYSTEM
+============================================ */
+h1, h2, h3, h4 {
+  font-family: 'Soltis Serif', 'Georgia', serif;
+  color: #0f172a;
+  margin-top: 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+h2 { font-size: 1.85rem; }
+
+/* ============================================
+    MAIN NAVIGATION 
+============================================ */
+.main-nav {
+    background: #1e2a38; /* Dark professional slate */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centers the tabs on the page */
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap; /* Prevents overflow on smaller screens */
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase; /* Magazine-style all-caps */
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 1.2rem 1.5rem;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #7ec8ff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* This creates the "Active" tab highlight */
+.main-nav a.active {
+    color: #7ec8ff;
+    border-bottom: 3px solid #458fcd;
+    background: rgba(126, 200, 255, 0.1);
+}
+
+/* ============================================
+    CONTENT WRAPPER & MODERN CARDS
+============================================ */
+.content-wrapper, main {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  min-height: 80vh;
+}
+
+
+section {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+section h2 {
+  border-left: 4px solid #458fcd;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+  color: #334155;
+}
+
+/* ============================================
+    INTERACTIVE TABLES 
+============================================ */
+.interactive-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.interactive-table th {
+  background-color: #1e293b;
+  color: #f8fafc;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  padding: 1rem;
+}
+
+.interactive-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  background: #ffffff;
+}
+
+.interactive-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.interactive-table tbody tr:hover td {
+  background-color: #f1f9ff;
+  color: #0369a1;
+  transition: background 0.2s ease;
+}
+
+/* ============================================
+    FOOTER
+============================================ */
+footer, .site-footer {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-top: 5rem;
+  padding: 3rem 0;
+  background-color: #f1f5f9;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* ============================================
+    RESPONSIVE DESIGN
+============================================ */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .content-wrapper, main {
+    padding: 0 1rem;
+  }
+  
+  section {
+    padding: 1.5rem;
+  }
+}

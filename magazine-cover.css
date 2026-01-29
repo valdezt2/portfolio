@@ -1,0 +1,97 @@
+/* ============================================
+   GLOBAL PAGE STYLING 
+============================================ */
+body {
+  font-family: 'Gill Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #e0e0e0, #cce0f5);
+  color: #2c3e50;
+}
+
+/* ============================================
+   NAVIGATION & HEADER 
+============================================ */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  background-color: #004080;
+  display: flex;
+  gap: 1rem;
+  justify-content: center; 
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+/* ============================================
+   MAGAZINE COVER:
+============================================ */
+
+.magazine-container {
+  position: relative;
+  width: 300px; 
+  height: 400px; 
+  margin: 3rem auto;
+  border-radius: 8px; 
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 2px solid #004080; 
+}
+
+.magazine-image {
+  width: 25%;
+  height: %;
+  object-fit: cover; 
+  display: block;
+}
+
+.magazine-text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.magazine-title {
+  font-family: 'Soltis Serif', serif;
+  color: #004080;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+.headline-box {
+  background-color: rgba(0, 64, 128, 0.9);
+  color: white;
+  padding: 12px;
+  font-size: 0.85rem;
+  border-left: 4px solid #007acc;
+}
+
+
+
+/* ============================================
+   FOOTER (Matched)
+============================================ */
+footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  background: #f4f8fc;
+  border-top: 2px solid #004080;
+}

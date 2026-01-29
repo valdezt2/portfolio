@@ -1,0 +1,155 @@
+/* ============================================
+   HERO BANNER
+============================================ */
+.hero {
+  background: linear-gradient(to right, #004080, #0066cc);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-family: 'Soltis Serif', serif;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   CONTENT WRAPPER
+============================================ */
+.content-wrapper {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.showcase-section {
+  margin-bottom: 3rem;
+}
+
+.showcase-section h2 {
+  font-family: 'Soltis Serif', serif;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.showcase-section h3 {
+  font-family: 'Soltis Serif', serif;
+  color: #004080;
+  margin-top: 1.5rem;
+}
+
+.showcase-section p,
+.showcase-section ul {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ============================================
+   LINKS
+============================================ */
+.showcase-section a {
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.showcase-section a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   HIGHLIGHT BOXES
+============================================ */
+.highlight {
+  background-color: #d9eaf7;
+  border-left: 6px solid #007acc;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-weight: bold;
+}
+
+/* ============================================
+   INTERACTIVE TABLE
+============================================ */
+.interactive-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f4f8fc;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-size: 1rem;
+}
+
+.interactive-table th,
+.interactive-table td {
+  padding: 0.85rem 1rem;
+  border: 1px solid #b8c6d1;
+  text-align: left;
+}
+
+.interactive-table th {
+  background-color: #004080;
+  color: white;
+  font-family: 'Soltis Serif', serif;
+}
+
+.interactive-table tbody tr:nth-child(even) td {
+  background-color: #e0e6ed;
+}
+
+.interactive-table tbody tr:hover td {
+  background-color: #d9eaf7;
+  color: #003366;
+  cursor: pointer;
+}
+
+/* ============================================
+   RESPONSIVE LAYOUT
+============================================ */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .interactive-table th,
+  .interactive-table td {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+
+  .showcase-section p,
+  .showcase-section ul {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2.5rem 1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .interactive-table {
+    font-size: 0.9rem;
+  }
+
+  .showcase-section p,
+  .showcase-section ul {
+    font-size: 0.95rem;
+  }
+}

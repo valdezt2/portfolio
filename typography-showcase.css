@@ -1,0 +1,125 @@
+/* ----------------------------------------------------
+    TYPOGRAPHY SHOWCASE STYLES
+---------------------------------------------------- */
+
+.typo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 2.5rem 0;
+}
+
+.typo-card {
+    background: #ffffff;
+    border: 1px solid #b8c6d1;
+    border-radius: 4px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.typo-card:hover {
+    transform: translateY(-5px);
+    border-color: #007acc;
+    box-shadow: 0 8px 20px rgba(0, 64, 128, 0.1);
+}
+
+
+.typo-card h3 {
+    font-family: 'Soltis Serif', serif;
+    color: #003366;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #d9eaf7;
+    padding-bottom: 0.5rem;
+}
+
+
+.sample-text {
+    font-size: 1.1rem;
+    line-height: 1.8; 
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.serif-specimen {
+    font-family: 'Soltis Serif', Georgia, serif;
+}
+
+.sans-specimen {
+    font-family: 'Gill Sans', 'Segoe UI', sans-serif;
+}
+
+.specimen-meta {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #007acc;
+    font-weight: bold;
+}
+
+
+/* ============================================
+   NAVIGATION & HEADER 
+============================================ */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  background-color: #004080;
+  display: flex;
+  gap: 1rem;
+  justify-content: center; 
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ----------------------------------------------------
+    VISUAL HIERARCHY DEMO
+---------------------------------------------------- */
+.hierarchy-showcase {
+    background-color: #f4f8fc;
+    border: 2px solid #b8c6d1;
+    padding: 3rem;
+    border-radius: 8px;
+    margin: 3rem 0;
+}
+
+.hierarchy-showcase h1 {
+    font-family: 'Soltis Serif', serif;
+    font-size: 3rem;
+    color: #003366;
+    margin-bottom: 0.5rem;
+}
+
+.hierarchy-showcase h2 {
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 1.5rem;
+    color: #458fcd;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.hierarchy-showcase p {
+    color: #2c3e50;
+    max-width: 800px;
+    font-size: 1.1rem;
+}
+
+/* ----------------------------------------------------
+    ALPHABET STRIPS
+---------------------------------------------------- */
+.alphabet-strip {
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    color: #b8c6d1;
+    word-break: break-all;
+    margin-top: 1rem;
+    border-top: 1px dashed #d9eaf7;
+    padding-top: 1rem;
+}

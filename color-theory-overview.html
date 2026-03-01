@@ -3,57 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Theory Overview | Jacqueline Valdez</title>
+    <title>Color Theme Showcase | Jacqueline Valdez</title>
     <link rel="stylesheet" href="sitewide.css">
-    <link rel="stylesheet" href="color-theory-overview.css">
+    <link rel="stylesheet" href="color-theme-showcase.css">
 </head>
+<body>
 
-<nav class="main-nav">
-    <ul>
-        <li><a href="index.html">Home</a></li>
+    <nav class="navbar">
+  <ul class="nav-menu">
+    
+    <li class="dropdown">
+      <a href="index.html" class="nav-link">Home ▾</a>
+      <ul class="dropdown-menu">
         <li><a href="color-theory.html">Color Theory</a></li>
+        <li><a href="color-theory-overview.html">Color Theory Overview</a></li>
         <li><a href="color-theme-showcase.html">Color Themes</a></li>
-        <li><a href="typography-showcase.html">Typography</a></li>
-        <li><a href="magazine-cover.html">Magazine</a></li>
-        <li><a href="photo-restoration.html">Restoration</a></li>
+        <li><a href="typography-showcase.html">Typography Showcase</a></li>
+        <li><a href="magazine-cover.html">Magazine Cover</a></li>
+        <li><a href="photo-restoration.html">Photo Restoration</a></li>
         <li><a href="resume.html">Resume</a></li>
-    </ul>
+      </ul>
+    </li>
+
+  </ul>
 </nav>
 
- </header>
-
     <main>
-        <section class="overview-header">
-            <h1>Color Theory: An Overview</h1>
-            <p>A comprehensive guide to how color systems work and why they matter in clinical and digital environments.</p>
+        <section class="showcase-intro">
+            <h1>Color Theme Showcase</h1>
+            <p>This gallery demonstrates how different color palettes influence the "mood" and accessibility of a digital interface.</p>
         </section>
 
-        <section class="theory-concepts">
-            <article>
-                <h2>The Color Wheel</h2>
-                <p>The color wheel is the basis of color theory. It consists of <strong>Primary</strong>, <strong>Secondary</strong>, and <strong>Tertiary</strong> colors. Understanding their relationship helps in creating balanced designs.</p>
-            </article>
+        <section class="theme-grid">
+            
+            <div class="theme-card">
+                <img src="forest-calm.jpg" alt="Forest Calm Color Palette" class="theme-preview">
+                <div class="theme-info">
+                    <h3>Forest Calm</h3>
+                    <p><strong>Harmony:</strong> Analogous Greens</p>
+                    <p>Evokes feelings of growth, stability, and nature. Ideal for healthcare or environmental branding.</p>
+                </div>
+            </div>
 
-            <article>
-                <h2>Color Schemes</h2>
-                <p>Using the color wheel, we can create specific harmonies:</p>
-                <ul>
-                    <li><strong>Monochromatic:</strong> Variations of a single hue.</li>
-                    <li><strong>Analogous:</strong> Colors located next to each other.</li>
-                    <li><strong>Complementary:</strong> Colors opposite each other (high contrast).</li>
-                </ul>
-            </article>
+            <div class="theme-card">
+                <img src="vibrant-pulse.jpg" alt="Vibrant Pulse Color Palette" class="theme-preview">
+                <div class="theme-info">
+                    <h3>Vibrant Pulse</h3>
+                    <p><strong>Harmony:</strong> Complementary</p>
+                    <p>High energy and high contrast. Used to draw attention to specific calls-to-action (CTAs).</p>
+                </div>
+            </div>
 
-            <article>
-                <h2>Additive vs. Subtractive Color</h2>
-                <p>In web design, we use the <strong>RGB</strong> (Additive) model, whereas in print (like my magazine project), we use <strong>CMYK</strong> (Subtractive).</p>
-            </article>
+            <div class="theme-card">
+                <img src="minimal-slate.jpg" alt="Minimal Slate Color Palette" class="theme-preview">
+                <div class="theme-info">
+                    <h3>Minimal Slate</h3>
+                    <p><strong>Harmony:</strong> Monochromatic</p>
+                    <p>A professional, sophisticated look that focuses on content and clean hierarchy.</p>
+                </div>
+            </div>
+
         </section>
 
-        <section class="navigation-footer">
-            <p>Ready to see these principles in action?</p>
-            <a href="color-theme-showcase.html" class="btn">View My Color Themes</a>
-        </section>
+            <footer class="color-theme-showcase">
+                <p><a href="index.html">← Home</a></p>
+            </footer>
+        </showcase>
+
+
     </main>
 
     <footer>

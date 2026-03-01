@@ -40,92 +40,124 @@
         .download-btn:hover {
             background-color: #34495e;
         }
+
+        /* Collapsible sections */
+        details {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px 15px;
+            background-color: #fafafa;
+        }
+        details summary {
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none;
+        }
+        details[open] {
+            background-color: #f5f5f5;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details summary::before {
+            content: "▾ ";
+            font-size: 0.9em;
+        }
+        details[open] summary::before {
+            content: "▴ ";
+        }
     </style>
 </head>
+<body>
 
-<nav class="main-nav">
-    <ul>
-        <li><a href="index.html">Home</a></li>
+<nav class="navbar">
+  <ul class="nav-menu">
+    <li class="dropdown">
+      <a href="index.html" class="nav-link">Home ▾</a>
+      <ul class="dropdown-menu">
         <li><a href="color-theory.html">Color Theory</a></li>
+        <li><a href="color-theory-overview.html">Color Theory Overview</a></li>
         <li><a href="color-theme-showcase.html">Color Themes</a></li>
-        <li><a href="typography-showcase.html">Typography</a></li>
-        <li><a href="magazine-cover.html">Magazine</a></li>
-        <li><a href="photo-restoration.html">Restoration</a></li>
+        <li><a href="typography-showcase.html">Typography Showcase</a></li>
+        <li><a href="magazine-cover.html">Magazine Cover</a></li>
+        <li><a href="photo-restoration.html">Photo Restoration</a></li>
         <li><a href="resume.html">Resume</a></li>
-    </ul>
+      </ul>
+    </li>
+  </ul>
 </nav>
 
- </header>
- 
-    <main class="resume-container">
-        <header class="resume-header">
-            <h1>Jacqueline Valdez</h1>
-            <p>M.Ed., CO, BOCP, FAAOP</p>
-            <p>Clinical Education Specialist | Digital Learning Designer</p>
+<main class="resume-container">
+    <header class="resume-header">
+        <h1>Jacqueline Valdez</h1>
+        <p>M.Ed., CO, BOCP, FAAOP</p>
+        <p>Clinical Education Specialist | Digital Learning Designer</p>
+    </header>
 
-        </header>
+    <details open id="professional-summary">
+        <summary>Professional Summary</summary>
+        <p>Certified Orthotist/Prosthetist and Clinical Education Specialist with over 35 years of experience. Expert in practitioner training, curriculum development, and creating innovative digital learning solutions for global orthopedic standards.</p>
+    </details>
 
-        <section id="professional-summary">
-            <h2>Professional Summary</h2>
-            <p>Certified Orthotist/Prosthetist and Clinical Education Specialist with over 35 years of experience. Expert in practitioner training, curriculum development, and creating innovative digital learning solutions for global orthopedic standards.</p>
-        </section>
+    <details open id="experience">
+        <summary>Work Experience</summary>
 
-        <section id="experience">
-            <h2>Experience</h2>
-            <div class="job-entry">
-                <div class="job-title">
-                    <span>Clinical & Technical Manager – BionIT Labs</span>
-                    <span>2025 - Present</span>
-                </div>
-                <ul>
-                    <li>Upper Limb Specialist in AI Pattern Recognition Myoelectrics.</li>
-                    <li>Develop digital curriculum for global educational standards.</li>
-                </ul>
-
-                </div>
-                <div class="job-title">
-                    <span>Clinical Education Specialist – Ottobock</span>
-                    <span>2022 - 2024</span>
-                </div>
-                <ul>
-                    <li>Lead clinical training initiatives for advanced O&P technologies.</li>
-                    <li>Develop digital curriculum for global educational standards.</li>
-                </ul>
+        <div class="job-entry">
+            <div class="job-title">
+                <span>Clinical & Technical Manager – BionIT Labs</span>
+                <span>2025 - Present</span>
             </div>
+            <ul>
+                <li>Upper Limb Specialist in AI Pattern Recognition Myoelectrics.</li>
+                <li>Develop digital curriculum for global educational standards.</li>
+            </ul>
+        </div>
 
-            <div class="job-entry">
-                <div class="job-title">
-                    <span>Clinical Education Specialist – Fillauer</span>
-                    <span>2017 – 2022</span>
-                </div>
-                <ul>
-                    <li>Managed educational outreach and technical training programs.</li>
-                </ul>
+        <div class="job-entry">
+            <div class="job-title">
+                <span>Clinical Education Specialist – Ottobock</span>
+                <span>2022 - 2024</span>
             </div>
-        </section>
-
-        <section id="education">
-            <h2>Education</h2>
             <ul>
-                <li><strong>M.Ed. in Integrated Sciences & Online Teaching</strong> – American College of Education</li>
-                <li><strong>B.S. in Sports Medicine</strong> – University of New Mexico</li>
-                <li><strong>Associate Degree in Orthotics & Prosthetics</strong> – Century College</li>
+                <li>Lead clinical training initiatives for advanced O&P technologies.</li>
+                <li>Develop digital curriculum for global educational standards.</li>
             </ul>
-        </section>
+        </div>
 
-        <section id="certifications">
-            <h2>Certifications</h2>
+        <div class="job-entry">
+            <div class="job-title">
+                <span>Clinical Education Specialist – Fillauer</span>
+                <span>2017 – 2022</span>
+            </div>
             <ul>
-                <li>Fellow of the Academy of Orthotics and Prosthetics (FAAOP)</li>
-                <li>Certified Orthotist (CO) & Board Certified Prosthetist (BOCP)</li>
-                <li>Web Design & Visual Communication (In Progress)</li>
+                <li>Managed educational outreach and technical training programs.</li>
             </ul>
-        </section>
-    </main>
+        </div>
+    </details>
 
-    <footer>
-        <p>© 2026 Jacqueline Valdez. All rights reserved.</p>
-    </footer>
+    <details open id="education">
+        <summary>Education</summary>
+        <ul>
+            <li><strong>M.Ed. in Integrated Sciences & Online Teaching</strong> – American College of Education</li>
+            <li><strong>B.S. in Sports Medicine</strong> – University of New Mexico</li>
+            <li><strong>Associate Degree in Orthotics & Prosthetics</strong> – Century College</li>
+        </ul>
+    </details>
+
+    <details open id="certifications">
+        <summary>Certifications</summary>
+        <ul>
+            <li>Fellow of the Academy of Orthotics and Prosthetics (FAAOP)</li>
+            <li>Certified Orthotist (CO) & Board Certified Prosthetist (BOCP)</li>
+            <li>Web Design & Visual Communication (In Progress)</li>
+        </ul>
+    </details>
+</main>
+
+<footer>
+    <p>© 2026 Jacqueline Valdez. All rights reserved.</p>
+</footer>
 
 </body>
 </html>

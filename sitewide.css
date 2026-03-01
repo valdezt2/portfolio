@@ -1,175 +1,203 @@
-/* ============================================
-    GLOBAL RESET + MODERN BASE
-============================================ */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
+/* --------------------------------------------------
+   GLOBAL RESET
+-------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.7; 
-  background-color: #f2f2f2; 
-  color: #1e293b; 
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* ============================================
-    TYPOGRAPHY SYSTEM
-============================================ */
-h1, h2, h3, h4 {
-  font-family: 'Soltis Serif', 'Georgia', serif;
-  color: #0f172a;
-  margin-top: 0;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+/* --------------------------------------------------
+   THEME MODES
+-------------------------------------------------- */
+body.light-mode {
+    background: #ffffff;
+    color: #222;
 }
 
-h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-h2 { font-size: 1.85rem; }
+body.dark-mode {
+    background: #121212;
+    color: #e5e5e5;
+}
 
-/* ============================================
-    MAIN NAVIGATION 
-============================================ */
-.main-nav {
-    background: #1e2a38; /* Dark professional slate */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    position: sticky;
-    top: 0;
+body.dark-mode a {
+    color: #9ecbff;
+}
+
+/* --------------------------------------------------
+   FONT SIZE CONTROLS
+-------------------------------------------------- */
+body.font-small {
+    font-size: 14px;
+}
+
+body.font-medium {
+    font-size: 16px;
+}
+
+body.font-large {
+    font-size: 18px;
+}
+
+/* --------------------------------------------------
+   NAVIGATION BAR
+-------------------------------------------------- */
+.navbar {
+    background: #333;
+    padding: 10px 20px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu > li {
+    position: relative;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+}
+
+.nav-link:hover {
+    background: #444;
+}
+
+/* --------------------------------------------------
+   DROPDOWN MENUS
+-------------------------------------------------- */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 180px;
+    border: 1px solid #ccc;
     z-index: 1000;
 }
 
-.main-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center; /* Centers the tabs on the page */
-    margin: 0;
-    padding: 0;
-    flex-wrap: wrap; /* Prevents overflow on smaller screens */
-}
-
-.main-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    text-transform: uppercase; /* Magazine-style all-caps */
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    padding: 1.2rem 1.5rem;
+.dropdown:hover .dropdown-menu {
     display: block;
-    transition: all 0.3s ease;
 }
 
-.main-nav a:hover {
-    color: #7ec8ff;
-    background: rgba(255, 255, 255, 0.05);
+.dropdown-menu li a {
+    display: block;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
 }
 
-/* This creates the "Active" tab highlight */
-.main-nav a.active {
-    color: #7ec8ff;
-    border-bottom: 3px solid #458fcd;
-    background: rgba(126, 200, 255, 0.1);
+.dropdown-menu li a:hover {
+    background: #f0f0f0;
 }
 
-/* ============================================
-    CONTENT WRAPPER & MODERN CARDS
-============================================ */
-.content-wrapper, main {
-  max-width: 1100px;
-  margin: 3rem auto;
-  padding: 0 2rem;
-  min-height: 80vh;
+/* Label inside dropdown (Theme menu sections) */
+.menu-label {
+    font-weight: bold;
+    padding: 8px 12px;
+    background: #eaeaea;
+    cursor: default;
 }
 
-
-section {
-  background: #ffffff;
-  padding: 2.5rem;
-  border-radius: 12px;
-  margin-bottom: 3rem;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+/* Dark mode dropdown adjustments */
+body.dark-mode .dropdown-menu {
+    background: #1f1f1f;
+    border-color: #444;
 }
 
-section h2 {
-  border-left: 4px solid #458fcd;
-  padding-left: 1rem;
-  margin-bottom: 1.5rem;
-  color: #334155;
+body.dark-mode .dropdown-menu li a {
+    color: #e5e5e5;
 }
 
-/* ============================================
-    INTERACTIVE TABLES 
-============================================ */
-.interactive-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  margin: 1.5rem 0;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid #e2e8f0;
+body.dark-mode .dropdown-menu li a:hover {
+    background: #333;
 }
 
-.interactive-table th {
-  background-color: #1e293b;
-  color: #f8fafc;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-  padding: 1rem;
+body.dark-mode .menu-label {
+    background: #2a2a2a;
+    color: #fff;
 }
 
-.interactive-table td {
-  padding: 1rem;
-  border-bottom: 1px solid #f1f5f9;
-  background: #ffffff;
+/* --------------------------------------------------
+   HERO SECTION
+-------------------------------------------------- */
+#hero {
+    text-align: center;
+    padding: 60px 20px;
 }
 
-.interactive-table tbody tr:last-child td {
-  border-bottom: none;
+#hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
 }
 
-.interactive-table tbody tr:hover td {
-  background-color: #f1f9ff;
-  color: #0369a1;
-  transition: background 0.2s ease;
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
 }
 
-/* ============================================
-    FOOTER
-============================================ */
-footer, .site-footer {
-  text-align: center;
-  font-size: 0.95rem;
-  color: #64748b;
-  margin-top: 5rem;
-  padding: 3rem 0;
-  background-color: #f1f5f9;
-  border-top: 1px solid #e2e8f0;
+/* Dark mode hero adjustments */
+body.dark-mode #hero .subtitle {
+    color: #bbb;
 }
 
-/* ============================================
-    RESPONSIVE DESIGN
-============================================ */
-@media (max-width: 768px) {
-  .main-nav ul {
-    flex-direction: column;
-    gap: 0;
-  }
-  
-  .content-wrapper, main {
-    padding: 0 1rem;
-  }
-  
-  section {
-    padding: 1.5rem;
-  }
+/* --------------------------------------------------
+   ABOUT SECTION
+-------------------------------------------------- */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.profile-img {
+    border-radius: 8px;
+}
+
+.about-text h2 {
+    margin-bottom: 10px;
+}
+
+/* --------------------------------------------------
+   DETAILS SECTION
+-------------------------------------------------- */
+#details {
+    padding: 40px 20px;
+}
+
+#details h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#details ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* Dark mode footer */
+body.dark-mode footer {
+    background: #1a1a1a;
 }

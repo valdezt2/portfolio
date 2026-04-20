@@ -1,0 +1,128 @@
+{
+  "title": "MyoUnit Essentials",
+  "description": "EMG interpretation, calibration, and clinical application using the Myo Unit and MyoLogic Pro.",
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "prompt": "What is the primary purpose of the Myo Unit system in clinical settings?",
+      "options": [
+        "To evaluate muscle signals, optimize electrode placement, and prepare users for advanced myoelectric control.",
+        "To monitor cardiovascular health during physical activity.",
+        "To diagnose neuromuscular disorders and provide treatment recommendations.",
+        "To train clinicians on general physical therapy techniques."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "What must be done to ensure the Myo Unit connects successfully to the MyoLogic Pro app?",
+      "options": [
+        "Turn off Bluetooth on the device and restart the Myo Unit.",
+        "Launch the app and wait for the Myo Unit to connect automatically without powering it on.",
+        "Ensure the Myo Unit is powered on and stable, and Bluetooth is enabled on the device running the app.",
+        "Ensure the Myo Unit is charging, and the app is running in offline mode."
+      ],
+      "answer": 2
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "What is the primary purpose of the Myo Unit in clinical settings?",
+      "options": [
+        "To replace manual prosthetic adjustments entirely.",
+        "To train clinicians on advanced surgical techniques.",
+        "To diagnose neurological disorders in patients.",
+        "To provide fast, reliable EMG visualization for identifying optimal electrode sites and assessing signal quality."
+      ],
+      "answer": 3
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "What is the correct procedure for connecting EMG electrodes to the Myo Unit?",
+      "options": [
+        "Place the electrode into the back of the holder.",
+        "Connect the electrodes to the charging port of the device.",
+        "Place the electrodes on the device's power button.",
+        "Attach the electrodes directly to the screen."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "What is one primary benefit of using the Training Games mode for EMG practice?",
+      "options": [
+        "It eliminates the need for professional guidance during EMG training.",
+        "It guarantees faster recovery for all users.",
+        "It helps users learn consistent and repeatable muscle contractions.",
+        "It replaces traditional physical therapy exercises."
+      ],
+      "answer": 2
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "What are the three steps involved in the calibration process for the Myo Unit using the MyoLogic Pro app?",
+      "options": [
+        "Resting, flexing the fingers, and extending the fingers.",
+        "Resting, contracting the wrist extensors, and rotating the wrist.",
+        "Resting, contracting the wrist flexors, and contracting the wrist extensors.",
+        "Resting, contracting the wrist flexors, and holding the wrist in a neutral position."
+      ],
+      "answer": 2
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "What is the primary benefit of the Myo Unit's real-time EMG signal visualization feature?",
+      "options": [
+        "It automates the calibration process for myoelectric prosthetic devices.",
+        "It allows clinicians to quickly determine whether a site produces clean, reliable EMG signals suitable for myoelectric control.",
+        "It ensures that the Myo Unit is compatible with all types of prosthetic devices.",
+        "It provides a detailed analysis of a patient’s muscle strength over time."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "matching",
+      "prompt": "Match each aspect of the Myo Unit's integration with MyoLogic Pro to its specific role in streamlining the prosthetic workflow.",
+      "pairs": [
+        {
+          "left": "Evaluation",
+          "right": "Helps clinicians identify optimal electrode sites and assess signal quality."
+        },
+        {
+          "left": "Training",
+          "right": "Prepares patients for successful myoelectric control."
+        },
+        {
+          "left": "Calibration",
+          "right": "Streamlines the adjustment of prosthetic settings for optimal performance."
+        }
+      ],
+      "choices": [
+        "Helps clinicians identify optimal electrode sites and assess signal quality.",
+        "Prepares patients for successful myoelectric control.",
+        "Streamlines the adjustment of prosthetic settings for optimal performance."
+      ]
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "What is the primary criterion for identifying a reliable EMG site?",
+      "options": [
+        "The site consistently produces strong and repeatable EMG signals.",
+        "The site is located on the largest muscle in the region.",
+        "The site is located near a major nerve bundle.",
+        "The site shows minimal electrical activity at rest."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "How does the Myo Unit integrate with the MyoLogic Pro app to enhance clinical workflows?",
+      "options": [
+        "It replaces the need for real-time EMG signal visualization.",
+        "It provides enhanced visualization, calibration simulation, and workflow continuity.",
+        "It eliminates the need for patient training sessions.",
+        "It allows the Myo Unit to function without EMG electrodes."
+      ],
+      "answer": 1
+    }
+  ]
+}

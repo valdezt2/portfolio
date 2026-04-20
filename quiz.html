@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BionIT Labs Demo Unit Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="app-shell">
+        <section class="quiz-card">
+            <div class="quiz-header">
+                <p class="eyebrow">Interactive Knowledge Check</p>
+                <h1>BionIT Labs Demo Unit Quiz</h1>
+                <p class="quiz-subtitle">
+                    Test your understanding of the Demo Unit package, controls, setup, and app connection workflow.
+                </p>
+            </div>
+
+            <form id="quizForm">
+
+                <div class="question" id="q1-block">
+                    <p class="question-title">1. What are the two sales configurations available for the Demo Unit Package?</p>
+                    <label><input type="radio" name="q1" value="a"> a. One configuration includes only the Demo Unit and its base, while the other includes the Demo Unit, its base, and Adam's Hand.</label>
+                    <label><input type="radio" name="q1" value="b"> b. One configuration includes the Demo Unit, its base, and a ThunderCell Battery, while the other includes only the Demo Unit and its base.</label>
+                    <label><input type="radio" name="q1" value="c"> c. Both configurations include the Demo Unit, its base, and a QR code card for downloading the MyoLogic Pro app.</label>
+                    <label><input type="radio" name="q1" value="d"> d. Both configurations include Adam's Hand and its charger.</label>
+                </div>
+
+                <div class="question" id="q2-block">
+                    <p class="question-title">2. What is the first step to power on the BionIT Labs Demo Unit?</p>
+                    <label><input type="radio" name="q2" value="a"> a. Activate the grip mode selector switch.</label>
+                    <label><input type="radio" name="q2" value="b"> b. Connect the Demo Unit to a prosthetic device first.</label>
+                    <label><input type="radio" name="q2" value="c"> c. Press and hold the power button until the indicator light turns on.</label>
+                    <label><input type="radio" name="q2" value="d"> d. Ensure the battery is fully charged before pressing any buttons.</label>
+                </div>
+
+                <div class="question" id="q3-block">
+                    <p class="question-title">3. What action restores Digital Control mode on the Demo Unit?</p>
+                    <label><input type="radio" name="q3" value="a"> a. A long press on the joystick while holding the vertical axis.</label>
+                    <label><input type="radio" name="q3" value="b"> b. A long press on the joystick.</label>
+                    <label><input type="radio" name="q3" value="c"> c. Restarting the Demo Unit.</label>
+                    <label><input type="radio" name="q3" value="d"> d. A quick double-click on the joystick.</label>
+                </div>
+
+                <div class="question" id="q4-block">
+                    <p class="question-title">4. What is the correct method to insert the ThunderCell Battery into the Demo Unit?</p>
+                    <label><input type="radio" name="q4" value="a"> a. Slide the battery into the receptacle and wait for the LED to flash green.</label>
+                    <label><input type="radio" name="q4" value="b"> b. Insert the battery in any direction and push it until it fits snugly.</label>
+                    <label><input type="radio" name="q4" value="c"> c. Place the battery loosely in the receptacle and press the power button to secure it.</label>
+                    <label><input type="radio" name="q4" value="d"> d. Insert the battery into the receptacle as indicated, then press down until you hear a click.</label>
+                </div>
+
+                <div class="question" id="q5-block">
+                    <p class="question-title">5. What is the correct sequence of steps to connect the Demo Hand to the MyoLogic Pro app?</p>
+                    <label><input type="radio" name="q5" value="a"> a. Launch the app, connect via Bluetooth, update firmware, add the device via QR code or manual entry, and find the device.</label>
+                    <label><input type="radio" name="q5" value="b"> b. Launch the app, find the device, connect via Bluetooth, update firmware, and add the device via QR code or manual entry.</label>
+                    <label><input type="radio" name="q5" value="c"> c. Launch the app, add the device via QR code or manual entry, find the device, connect via Bluetooth, and update firmware if necessary.</label>
+                    <label><input type="radio" name="q5" value="d"> d. Add the device via QR code or manual entry, find the device, update firmware, connect via Bluetooth, and launch the app.</label>
+                </div>
+
+                <div class="question" id="q6-block">
+                    <p class="question-title">6. What is the primary purpose of the BionIT Labs Demo Unit?</p>
+                    <label><input type="radio" name="q6" value="a"> a. To replace the need for a full prosthetic device in patient care.</label>
+                    <label><input type="radio" name="q6" value="b"> b. To train patients on how to use their specific prosthetic devices.</label>
+                    <label><input type="radio" name="q6" value="c"> c. To diagnose and repair prosthetic devices in clinical settings.</label>
+                    <label><input type="radio" name="q6" value="d"> d. To explore grip modes, signals, and device behavior without a full prosthetic setup.</label>
+                </div>
+
+                <div class="question" id="q7-block">
+                    <p class="question-title">7. What is the purpose of the three-phase EMG calibration process when using the Demo Hand?</p>
+                    <label><input type="radio" name="q7" value="a"> a. To test the Bluetooth connection between the Demo Hand and MyoLogic Pro.</label>
+                    <label><input type="radio" name="q7" value="b"> b. To map wrist flexor and extensor signals for hand control and prepare for wrist calibration if applicable.</label>
+                    <label><input type="radio" name="q7" value="c"> c. To activate Electrode Control Mode for the Demo Hand.</label>
+                    <label><input type="radio" name="q7" value="d"> d. To configure the grip patterns for the Demo Hand.</label>
+                </div>
+
+                <div class="question" id="q8-block">
+                    <p class="question-title">8. Match the joystick actions with their functions.</p>
+
+                    <div class="match-pair">
+                        <span>Move the joystick up:</span>
+                        <select name="q8a">
+                            <option value="">Select...</option>
+                            <option value="close">Closes the hand</option>
+                            <option value="open">Opens the hand</option>
+                            <option value="ccw">Rotates the wrist counterclockwise</option>
+                            <option value="cw">Rotates the wrist clockwise</option>
+                        </select>
+                    </div>
+
+                    <div class="match-pair">
+                        <span>Move the joystick down:</span>
+                        <select name="q8b">
+                            <option value="">Select...</option>
+                            <option value="close">Closes the hand</option>
+                            <option value="open">Opens the hand</option>
+                            <option value="ccw">Rotates the wrist counterclockwise</option>
+                            <option value="cw">Rotates the wrist clockwise</option>
+                        </select>
+                    </div>
+
+                    <div class="match-pair">
+                        <span>Move the joystick left:</span>
+                        <select name="q8c">
+                            <option value="">Select...</option>
+                            <option value="close">Closes the hand</option>
+                            <option value="open">Opens the hand</option>
+                            <option value="ccw">Rotates the wrist counterclockwise</option>
+                            <option value="cw">Rotates the wrist clockwise</option>
+                        </select>
+                    </div>
+
+                    <div class="match-pair">
+                        <span>Move the joystick right:</span>
+                        <select name="q8d">
+                            <option value="">Select...</option>
+                            <option value="close">Closes the hand</option>
+                            <option value="open">Opens the hand</option>
+                            <option value="ccw">Rotates the wrist counterclockwise</option>
+                            <option value="cw">Rotates the wrist clockwise</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="question" id="q9-block">
+                    <p class="question-title">9. What action is required to switch the Demo Unit from joystick control mode to electrode control mode?</p>
+                    <label><input type="radio" name="q9" value="a"> a. Turn the Demo Unit off and on again.</label>
+                    <label><input type="radio" name="q9" value="b"> b. Double-click the joystick.</label>
+                    <label><input type="radio" name="q9" value="c"> c. Press and hold the joystick for 5 seconds.</label>
+                    <label><input type="radio" name="q9" value="d"> d. Tap the joystick three times.</label>
+                </div>
+
+                <div class="question" id="q10-block">
+                    <p class="question-title">10. What is the correct process for connecting the analog EMG electrodes to the Demo Unit?</p>
+                    <label><input type="radio" name="q10" value="a"> a. Connect the electrode cables first, then unscrew the panel screw, and finally secure the retention screw.</label>
+                    <label><input type="radio" name="q10" value="b"> b. Secure the retention screw, connect the electrode cables, and then unscrew the panel screw.</label>
+                    <label><input type="radio" name="q10" value="c"> c. Unscrew the panel screw, connect the electrode cables to the two analog inputs, and secure the retention screw.</label>
+                    <label><input type="radio" name="q10" value="d"> d. Simply connect the electrode cables to the analog inputs without unscrewing or securing anything.</label>
+                </div>
+
+                <div class="button-row">
+                    <button type="button" id="submitBtn">Submit Quiz</button>
+                </div>
+
+            </form>
+
+            <div id="results"></div>
+
+            <div class="button-row">
+                <button type="button" id="retakeBtn">Retake Quiz</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

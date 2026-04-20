@@ -1,0 +1,95 @@
+{
+  "title": "BionIT Master Quiz – Mixed Question Types",
+  "description": "This quiz combines key concepts from Demo Unit operation, MyoLogic Pro, EMG calibration, and ThunderCell battery handling.",
+
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "prompt": "What is the primary purpose of the BionIT Labs Demo Unit?",
+      "options": [
+        "To replace a full prosthetic device",
+        "To explore grip modes and device behavior without a full prosthetic setup",
+        "To permanently control Adam’s Hand",
+        "To diagnose hardware failures"
+      ],
+      "answer": 1
+    },
+
+    {
+      "type": "true-false",
+      "prompt": "The Demo Unit must be connected to a prosthetic device before it can be powered on.",
+      "answer": false
+    },
+
+    {
+      "type": "multiple-select",
+      "prompt": "Which of the following are part of the Demo Unit system? (Select all that apply)",
+      "options": [
+        "Demo Unit base",
+        "ThunderCell battery",
+        "MyoLogic Pro app",
+        "Hydraulic actuator"
+      ],
+      "answer": [0, 1, 2]
+    },
+
+    {
+      "type": "fill-in-the-blank",
+      "prompt": "The mobile application used to configure and connect devices is called __________.",
+      "answer": ["myologic pro", "myologic pro app"]
+    },
+
+    {
+      "type": "matching",
+      "prompt": "Match the joystick action to its function.",
+      "pairs": [
+        { "left": "Move joystick up", "right": "Closes the hand" },
+        { "left": "Move joystick down", "right": "Opens the hand" },
+        { "left": "Move joystick left", "right": "Rotates wrist counterclockwise" },
+        { "left": "Move joystick right", "right": "Rotates wrist clockwise" }
+      ],
+      "choices": [
+        "Closes the hand",
+        "Opens the hand",
+        "Rotates wrist counterclockwise",
+        "Rotates wrist clockwise"
+      ]
+    },
+
+    {
+      "type": "multiple-choice",
+      "prompt": "What is the correct way to insert the ThunderCell battery?",
+      "options": [
+        "Insert loosely and press power",
+        "Insert in any direction until it fits",
+        "Insert as indicated and press until it clicks",
+        "Shake gently until secured"
+      ],
+      "answer": 2
+    },
+
+    {
+      "type": "true-false",
+      "prompt": "EMG calibration helps map muscle signals to control prosthetic movement.",
+      "answer": true
+    },
+
+    {
+      "type": "multiple-select",
+      "prompt": "Which steps are part of connecting a device in MyoLogic Pro? (Select all that apply)",
+      "options": [
+        "Launch the app",
+        "Add device via QR or manual entry",
+        "Connect via Bluetooth",
+        "Restart your phone"
+      ],
+      "answer": [0, 1, 2]
+    },
+
+    {
+      "type": "fill-in-the-blank",
+      "prompt": "The process used to map muscle signals is called __________ calibration.",
+      "answer": ["emg"]
+    }
+  ]
+}

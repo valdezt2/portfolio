@@ -1,0 +1,63 @@
+{
+  "title": "BionIT Labs – Demo Unit Quiz",
+  "description": "Test your understanding of the Demo Unit system, components, and clinical usage.",
+
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "prompt": "What is the primary purpose of the BionIT Labs Demo Unit?",
+      "options": [
+        "To demonstrate Adam’s Hand functionality in a controlled environment",
+        "To replace the full prosthetic system",
+        "To calibrate electrodes for long-term patient use",
+        "To store patient data"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "Which component allows the Demo Unit to simulate hand opening and closing?",
+      "options": [
+        "The MyoLogic Pro controller",
+        "The ThunderCell battery",
+        "The internal motor and actuator system",
+        "The electrode test pads"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "What is the correct power source for the Demo Unit?",
+      "options": [
+        "A standard USB-C power supply",
+        "The ThunderCell rechargeable battery",
+        "A 9-volt alkaline battery",
+        "Direct connection to Adam’s Hand"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "During a demonstration, what should the clinician verify before activating the hand?",
+      "options": [
+        "That the Demo Unit is connected to Wi-Fi",
+        "That the motor housing is securely closed and unobstructed",
+        "That the patient has completed electrode calibration",
+        "That the ThunderCell is fully charged"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "Which statement best describes the Demo Unit’s role in clinical education?",
+      "options": [
+        "It replaces hands-on prosthetic training",
+        "It provides a safe, portable way to demonstrate Adam’s Hand mechanics",
+        "It is only used for internal engineering testing",
+        "It is required for all prosthetic fittings"
+      ],
+      "answer": 1
+    }
+  ]
+}
+  

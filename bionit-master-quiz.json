@@ -1,5 +1,5 @@
 {
-  "title": "BionIT Master Quiz \u2013 Mixed Question Types",
+  "title": "BionIT Master Quiz – Mixed Question Types",
   "description": "This quiz uses JSON data, includes free-response questions, and checks that every question is answered before grading.",
   "questions": [
     {
@@ -27,17 +27,12 @@
         "MyoLogic Pro app",
         "Hydraulic actuator"
       ],
-      "answer": [
-        0,
-        1,
-        2
-      ]
+      "answer": [0, 1, 2]
     },
     {
       "type": "free-response",
       "prompt": "Name the mobile application used to configure and connect BionIT devices.",
-      "placeholder": "Enter the application name",
-      "acceptableAnswers": [
+      "answer": [
         "myologic pro",
         "myologic pro app"
       ]
@@ -95,17 +90,12 @@
         "Connect via Bluetooth",
         "Restart your phone"
       ],
-      "answer": [
-        0,
-        1,
-        2
-      ]
+      "answer": [0, 1, 2]
     },
     {
       "type": "free-response",
       "prompt": "What type of calibration is used to map muscle signals for device control?",
-      "placeholder": "Type the calibration name",
-      "acceptableAnswers": [
+      "answer": [
         "emg",
         "emg calibration"
       ]

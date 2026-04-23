@@ -1,6 +1,6 @@
 {
   "title": "MyoUnit Essentials",
-  "description": "EMG interpretation, calibration, and clinical application using the Myo Unit and MyoLogic Pro.",
+  "description": "EMG interpretation, calibration, and clinical application using the Myo Unit and MyoLogic Pro, including free-response prompts.",
   "questions": [
     {
       "type": "multiple-choice",
@@ -25,15 +25,13 @@
       "answer": 2
     },
     {
-      "type": "multiple-choice",
-      "prompt": "What is the primary purpose of the Myo Unit in clinical settings?",
-      "options": [
-        "To replace manual prosthetic adjustments entirely.",
-        "To train clinicians on advanced surgical techniques.",
-        "To diagnose neurological disorders in patients.",
-        "To provide fast, reliable EMG visualization for identifying optimal electrode sites and assessing signal quality."
-      ],
-      "answer": 3
+      "type": "free-response",
+      "prompt": "Write the name of the app used with the Myo Unit for visualization and setup.",
+      "placeholder": "Type the app name",
+      "acceptableAnswers": [
+        "myologic pro",
+        "myologic pro app"
+      ]
     },
     {
       "type": "multiple-choice",
@@ -69,19 +67,8 @@
       "answer": 2
     },
     {
-      "type": "multiple-choice",
-      "prompt": "What is the primary benefit of the Myo Unit's real-time EMG signal visualization feature?",
-      "options": [
-        "It automates the calibration process for myoelectric prosthetic devices.",
-        "It allows clinicians to quickly determine whether a site produces clean, reliable EMG signals suitable for myoelectric control.",
-        "It ensures that the Myo Unit is compatible with all types of prosthetic devices.",
-        "It provides a detailed analysis of a patient’s muscle strength over time."
-      ],
-      "answer": 1
-    },
-    {
       "type": "matching",
-      "prompt": "Match each aspect of the Myo Unit's integration with MyoLogic Pro to its specific role in streamlining the prosthetic workflow.",
+      "prompt": "Match each aspect of the Myo Unit workflow to its role.",
       "pairs": [
         {
           "left": "Evaluation",
@@ -123,6 +110,17 @@
         "It allows the Myo Unit to function without EMG electrodes."
       ],
       "answer": 1
+    },
+    {
+      "type": "free-response",
+      "prompt": "What kind of signals does the Myo Unit visualize in real time?",
+      "placeholder": "Type the signal type",
+      "acceptableAnswers": [
+        "emg",
+        "emg signals",
+        "electromyographic signals",
+        "muscle signals"
+      ]
     }
   ]
 }

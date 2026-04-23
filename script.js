@@ -1,3 +1,5 @@
+// /script.js
+
 const moduleSelect = document.getElementById("moduleSelect");
 const quizTitle = document.getElementById("quizTitle");
 const quizSubtitle = document.getElementById("quizSubtitle");
@@ -7,28 +9,49 @@ const resultsDiv = document.getElementById("results");
 const retakeBtn = document.getElementById("retakeBtn");
 const submitBtn = document.getElementById("submitBtn");
 
+const defaultTitle = "Select a BionIT Labs Quiz Module";
+const defaultSubtitle =
+    "Choose a quiz module below to load questions from a JSON file and test your knowledge.";
+
 let currentQuiz = null;
 
-moduleSelect.addEventListener("change", handleQuizChange);
-quizForm.addEventListener("submit", handleSubmit);
-retakeBtn.addEventListener("click", resetQuiz);
+initializeQuizApp();
 
-retakeBtn.style.display = "none";
+function initializeQuizApp() {
+    if (
+        !moduleSelect ||
+        !quizTitle ||
+        !quizSubtitle ||
+        !quizForm ||
+        !quizQuestions ||
+        !resultsDiv ||
+        !retakeBtn ||
+        !submitBtn
+    ) {
+        console.error("Quiz app could not start because required HTML elements are missing.");
+        return;
+    }
+
+    submitBtn.disabled = true;
+    retakeBtn.style.display = "none";
+
+    moduleSelect.addEventListener("change", handleQuizChange);
+    quizForm.addEventListener("submit", handleQuizSubmit);
+    retakeBtn.addEventListener("click", resetQuiz);
+}
 
 async function handleQuizChange() {
     const selectedFile = moduleSelect.value;
+
     clearQuizUI();
 
     if (!selectedFile) {
-        quizTitle.textContent = "Select a BionIT Labs Quiz Module";
-        quizSubtitle.textContent = "Choose a quiz module below to load questions from a JSON file and test your knowledge.";
+        setQuizHeader(defaultTitle, defaultSubtitle);
         submitBtn.disabled = true;
         return;
     }
 
-    quizTitle.textContent = "Loading Quiz...";
-    quizSubtitle.textContent = "Please wait while the quiz content is loaded.";
-    submitBtn.disabled = true;
+    setQuizHeader("Loading Quiz...", "Please wait while the quiz is being loaded.");
 
     try {
         const response = await fetch(selectedFile);
@@ -37,31 +60,52 @@ async function handleQuizChange() {
             throw new Error(`Failed to load ${selectedFile} (${response.status})`);
         }
 
-        const data = await response.json();
+        const quizData = await response.json();
 
-        if (!data.questions || !Array.isArray(data.questions) || data.questions.length === 0) {
-            throw new Error("Invalid quiz format: missing questions array.");
+        if (!quizData || !Array.isArray(quizData.questions) || quizData.questions.length === 0) {
+            throw new Error("Invalid quiz format: missing or empty questions array.");
         }
 
-        currentQuiz = data;
-        renderQuiz(data);
+        currentQuiz = quizData;
+        renderQuiz(quizData);
         submitBtn.disabled = false;
     } catch (error) {
         console.error("Error loading quiz:", error);
         currentQuiz = null;
-        quizTitle.textContent = "Error Loading Quiz";
-        quizSubtitle.textContent = "The quiz file could not be loaded.";
+        setQuizHeader("Error Loading Quiz", "The quiz file could not be loaded.");
+
         resultsDiv.innerHTML = `
-            <p>Could not load the selected quiz file.</p>
+            <p>Sorry, the selected quiz could not be opened.</p>
             <p>${escapeHtml(error.message)}</p>
-            <p>Run the project from a local server so the JSON files can be fetched correctly.</p>
+            <p>Run this project from a local server or GitHub Pages so the JSON files can load correctly.</p>
         `;
+
+        submitBtn.disabled = true;
+        retakeBtn.style.display = "none";
     }
 }
 
+function handleQuizSubmit(event) {
+    event.preventDefault();
+
+    if (!currentQuiz) {
+        return;
+    }
+
+    const unansweredQuestions = getUnansweredQuestions();
+
+    if (unansweredQuestions.length > 0) {
+        alert(buildIncompleteQuizMessage(unansweredQuestions));
+        focusFirstUnansweredQuestion(unansweredQuestions[0] - 1);
+        return;
+    }
+
+    gradeQuiz();
+}
+
 function renderQuiz(quizData) {
-    quizTitle.textContent = quizData.title || "Quiz";
-    quizSubtitle.textContent = quizData.description || "Answer every question before submitting.";
+    setQuizHeader(quizData.title || "Quiz", quizData.description || defaultSubtitle);
+
     quizQuestions.innerHTML = "";
     resultsDiv.innerHTML = "";
     retakeBtn.style.display = "none";
@@ -70,35 +114,40 @@ function renderQuiz(quizData) {
         const questionBlock = document.createElement("section");
         questionBlock.className = "question";
         questionBlock.id = `question-${index}`;
-        questionBlock.dataset.index = String(index);
 
-        const title = document.createElement("h2");
-        title.className = "question-title";
-        title.textContent = `${index + 1}. ${question.prompt}`;
-        questionBlock.appendChild(title);
+        const prompt = document.createElement("p");
+        prompt.className = "question-title";
+        prompt.textContent = `${index + 1}. ${question.prompt}`;
+        questionBlock.appendChild(prompt);
 
         switch (question.type) {
             case "multiple-choice":
                 renderMultipleChoice(questionBlock, question, index);
                 break;
+
             case "true-false":
                 renderTrueFalse(questionBlock, index);
                 break;
+
             case "multiple-select":
                 renderMultipleSelect(questionBlock, question, index);
                 break;
-            case "free-response":
-                renderFreeResponse(questionBlock, question, index);
+
+            case "fill-in-the-blank":
+                renderFillInTheBlank(questionBlock, index);
                 break;
+
+            case "free-response":
+                renderFreeResponse(questionBlock, index);
+                break;
+
             case "matching":
                 renderMatching(questionBlock, question, index);
                 break;
-            default: {
-                const unsupported = document.createElement("p");
-                unsupported.className = "unsupported-text";
-                unsupported.textContent = `Unsupported question type: ${question.type}`;
-                questionBlock.appendChild(unsupported);
-            }
+
+            default:
+                renderUnsupportedQuestion(questionBlock, question.type);
+                break;
         }
 
         quizQuestions.appendChild(questionBlock);
@@ -106,8 +155,10 @@ function renderQuiz(quizData) {
 }
 
 function renderMultipleChoice(container, question, index) {
-    const optionsWrapper = document.createElement("div");
-    optionsWrapper.className = "options-group";
+    if (!Array.isArray(question.options)) {
+        renderUnsupportedQuestion(container, "multiple-choice");
+        return;
+    }
 
     question.options.forEach((option, optionIndex) => {
         const label = document.createElement("label");
@@ -117,18 +168,15 @@ function renderMultipleChoice(container, question, index) {
         input.name = `q-${index}`;
         input.value = String(optionIndex);
 
-        label.appendChild(input);
-        label.append(` ${option}`);
-        optionsWrapper.appendChild(label);
-    });
+        const text = document.createTextNode(option);
 
-    container.appendChild(optionsWrapper);
+        label.appendChild(input);
+        label.appendChild(text);
+        container.appendChild(label);
+    });
 }
 
 function renderTrueFalse(container, index) {
-    const optionsWrapper = document.createElement("div");
-    optionsWrapper.className = "options-group";
-
     ["True", "False"].forEach((value) => {
         const label = document.createElement("label");
 
@@ -137,17 +185,19 @@ function renderTrueFalse(container, index) {
         input.name = `q-${index}`;
         input.value = value.toLowerCase();
 
-        label.appendChild(input);
-        label.append(` ${value}`);
-        optionsWrapper.appendChild(label);
-    });
+        const text = document.createTextNode(value);
 
-    container.appendChild(optionsWrapper);
+        label.appendChild(input);
+        label.appendChild(text);
+        container.appendChild(label);
+    });
 }
 
 function renderMultipleSelect(container, question, index) {
-    const optionsWrapper = document.createElement("div");
-    optionsWrapper.className = "options-group";
+    if (!Array.isArray(question.options)) {
+        renderUnsupportedQuestion(container, "multiple-select");
+        return;
+    }
 
     question.options.forEach((option, optionIndex) => {
         const label = document.createElement("label");
@@ -157,31 +207,39 @@ function renderMultipleSelect(container, question, index) {
         input.name = `q-${index}`;
         input.value = String(optionIndex);
 
-        label.appendChild(input);
-        label.append(` ${option}`);
-        optionsWrapper.appendChild(label);
-    });
+        const text = document.createTextNode(option);
 
-    container.appendChild(optionsWrapper);
+        label.appendChild(input);
+        label.appendChild(text);
+        container.appendChild(label);
+    });
 }
 
-function renderFreeResponse(container, question, index) {
-    const helper = document.createElement("p");
-    helper.className = "free-response-help";
-    helper.textContent = question.placeholder || "Write a short answer in your own words.";
-    container.appendChild(helper);
-
-    const input = document.createElement("textarea");
+function renderFillInTheBlank(container, index) {
+    const input = document.createElement("input");
+    input.type = "text";
     input.name = `q-${index}`;
-    input.className = "free-response-input";
-    input.rows = 4;
-    input.placeholder = question.placeholder || "Type your answer here";
+    input.className = "fill-blank-input";
+    input.placeholder = "Type your answer here";
+
     container.appendChild(input);
 }
 
+function renderFreeResponse(container, index) {
+    const textarea = document.createElement("textarea");
+    textarea.name = `q-${index}`;
+    textarea.className = "free-response-input";
+    textarea.rows = 5;
+    textarea.placeholder = "Type your response here";
+
+    container.appendChild(textarea);
+}
+
 function renderMatching(container, question, index) {
-    const matchesWrapper = document.createElement("div");
-    matchesWrapper.className = "matching-group";
+    if (!Array.isArray(question.pairs) || !Array.isArray(question.choices)) {
+        renderUnsupportedQuestion(container, "matching");
+        return;
+    }
 
     question.pairs.forEach((pair, pairIndex) => {
         const pairWrapper = document.createElement("div");
@@ -207,41 +265,14 @@ function renderMatching(container, question, index) {
 
         pairWrapper.appendChild(leftText);
         pairWrapper.appendChild(select);
-        matchesWrapper.appendChild(pairWrapper);
+        container.appendChild(pairWrapper);
     });
-
-    container.appendChild(matchesWrapper);
 }
 
-function handleSubmit(event) {
-    event.preventDefault();
-
-    if (!currentQuiz) {
-        return;
-    }
-
-    clearQuestionStates();
-
-    const unansweredQuestions = getUnansweredQuestions();
-
-    if (unansweredQuestions.length > 0) {
-        unansweredQuestions.forEach((questionIndex) => {
-            const block = document.getElementById(`question-${questionIndex}`);
-            if (block) {
-                block.classList.add("missing");
-            }
-        });
-
-        const firstMissingQuestion = unansweredQuestions[0] + 1;
-        alert(`Please answer every question before submitting. Question ${firstMissingQuestion} still needs a response.`);
-        document.getElementById(`question-${unansweredQuestions[0]}`)?.scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-        });
-        return;
-    }
-
-    gradeQuiz();
+function renderUnsupportedQuestion(container, type) {
+    const message = document.createElement("p");
+    message.textContent = `Unsupported question type: ${type || "unknown"}`;
+    container.appendChild(message);
 }
 
 function getUnansweredQuestions() {
@@ -252,32 +283,58 @@ function getUnansweredQuestions() {
     const unanswered = [];
 
     currentQuiz.questions.forEach((question, index) => {
-        if (!questionIsAnswered(question, index)) {
-            unanswered.push(index);
+        if (!isQuestionAnswered(question, index)) {
+            unanswered.push(index + 1);
         }
     });
 
     return unanswered;
 }
 
-function questionIsAnswered(question, index) {
+function isQuestionAnswered(question, index) {
     switch (question.type) {
         case "multiple-choice":
         case "true-false":
             return Boolean(document.querySelector(`input[name="q-${index}"]:checked`));
+
         case "multiple-select":
             return document.querySelectorAll(`input[name="q-${index}"]:checked`).length > 0;
+
+        case "fill-in-the-blank":
         case "free-response": {
-            const input = document.querySelector(`textarea[name="q-${index}"]`);
+            const input = document.querySelector(`[name="q-${index}"]`);
             return Boolean(input && input.value.trim());
         }
+
         case "matching":
             return question.pairs.every((_, pairIndex) => {
                 const select = document.querySelector(`select[name="q-${index}-pair-${pairIndex}"]`);
-                return Boolean(select && select.value);
+                return Boolean(select && select.value.trim());
             });
+
         default:
             return false;
+    }
+}
+
+function buildIncompleteQuizMessage(unansweredQuestions) {
+    const questionLabel =
+        unansweredQuestions.length === 1 ? "question" : "questions";
+
+    return `Please answer all questions before submitting.\n\nYou still need to complete ${questionLabel}: ${unansweredQuestions.join(", ")}.`;
+}
+
+function focusFirstUnansweredQuestion(index) {
+    const questionBlock = document.getElementById(`question-${index}`);
+
+    if (!questionBlock) {
+        return;
+    }
+
+    const firstField = questionBlock.querySelector("input, textarea, select");
+
+    if (firstField) {
+        firstField.focus();
     }
 }
 
@@ -285,32 +342,15 @@ function gradeQuiz() {
     let score = 0;
     const total = currentQuiz.questions.length;
 
+    clearColoring();
+
     currentQuiz.questions.forEach((question, index) => {
         const questionBlock = document.getElementById(`question-${index}`);
-        let isCorrect = false;
+        const isCorrect = gradeQuestion(question, index);
 
-        switch (question.type) {
-            case "multiple-choice":
-                isCorrect = gradeMultipleChoice(question, index);
-                break;
-            case "true-false":
-                isCorrect = gradeTrueFalse(question, index);
-                break;
-            case "multiple-select":
-                isCorrect = gradeMultipleSelect(question, index);
-                break;
-            case "free-response":
-                isCorrect = gradeFreeResponse(question, index);
-                break;
-            case "matching":
-                isCorrect = gradeMatching(question, index);
-                break;
-            default:
-                isCorrect = false;
+        if (questionBlock) {
+            questionBlock.classList.add(isCorrect ? "correct" : "incorrect");
         }
-
-        questionBlock.classList.remove("missing");
-        questionBlock.classList.add(isCorrect ? "correct" : "incorrect");
 
         if (isCorrect) {
             score += 1;
@@ -324,11 +364,40 @@ function gradeQuiz() {
 
     submitBtn.disabled = true;
     retakeBtn.style.display = "block";
+    resultsDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function gradeQuestion(question, index) {
+    switch (question.type) {
+        case "multiple-choice":
+            return gradeMultipleChoice(question, index);
+
+        case "true-false":
+            return gradeTrueFalse(question, index);
+
+        case "multiple-select":
+            return gradeMultipleSelect(question, index);
+
+        case "fill-in-the-blank":
+        case "free-response":
+            return gradeTextResponse(question, index);
+
+        case "matching":
+            return gradeMatching(question, index);
+
+        default:
+            return false;
+    }
 }
 
 function gradeMultipleChoice(question, index) {
     const selected = document.querySelector(`input[name="q-${index}"]:checked`);
-    return Boolean(selected) && Number(selected.value) === question.answer;
+
+    if (!selected) {
+        return false;
+    }
+
+    return Number(selected.value) === Number(question.answer);
 }
 
 function gradeTrueFalse(question, index) {
@@ -338,41 +407,89 @@ function gradeTrueFalse(question, index) {
         return false;
     }
 
-    return (selected.value === "true") === question.answer;
+    const userAnswer = selected.value === "true";
+    return userAnswer === Boolean(question.answer);
 }
 
 function gradeMultipleSelect(question, index) {
-    const selected = Array.from(document.querySelectorAll(`input[name="q-${index}"]:checked`))
+    const selected = Array.from(
+        document.querySelectorAll(`input[name="q-${index}"]:checked`)
+    )
         .map((input) => Number(input.value))
         .sort((a, b) => a - b);
 
-    const answers = [...question.answer].sort((a, b) => a - b);
+    const correctAnswers = Array.isArray(question.answer)
+        ? [...question.answer].map(Number).sort((a, b) => a - b)
+        : [];
 
-    return arraysEqual(selected, answers);
+    return arraysEqual(selected, correctAnswers);
 }
 
-function gradeFreeResponse(question, index) {
-    const input = document.querySelector(`textarea[name="q-${index}"]`);
+function gradeTextResponse(question, index) {
+    const input = document.querySelector(`[name="q-${index}"]`);
 
     if (!input) {
         return false;
     }
 
     const userAnswer = normalizeText(input.value);
-    const acceptableAnswers = (question.acceptableAnswers || []).map((answer) => normalizeText(answer));
 
-    return acceptableAnswers.includes(userAnswer);
+    if (!userAnswer) {
+        return false;
+    }
+
+    const acceptableAnswers = getAcceptableAnswers(question);
+
+    if (acceptableAnswers.length > 0) {
+        return acceptableAnswers.includes(userAnswer);
+    }
+
+    if (Array.isArray(question.keywords) && question.keywords.length > 0) {
+        return question.keywords.every((keyword) =>
+            userAnswer.includes(normalizeText(keyword))
+        );
+    }
+
+    return false;
 }
 
 function gradeMatching(question, index) {
     return question.pairs.every((pair, pairIndex) => {
         const select = document.querySelector(`select[name="q-${index}-pair-${pairIndex}"]`);
-        return Boolean(select) && select.value === pair.right;
+
+        if (!select) {
+            return false;
+        }
+
+        return normalizeText(select.value) === normalizeText(pair.right);
     });
+}
+
+function getAcceptableAnswers(question) {
+    if (Array.isArray(question.answer)) {
+        return question.answer.map((answer) => normalizeText(String(answer)));
+    }
+
+    if (typeof question.answer === "string" || typeof question.answer === "number") {
+        return [normalizeText(String(question.answer))];
+    }
+
+    return [];
+}
+
+function normalizeText(value) {
+    return String(value)
+        .toLowerCase()
+        .trim()
+        .replace(/[^\w\s]/g, "")
+        .replace(/\s+/g, " ");
 }
 
 function resetQuiz() {
     if (!currentQuiz) {
+        clearQuizUI();
+        setQuizHeader(defaultTitle, defaultSubtitle);
+        submitBtn.disabled = true;
         return;
     }
 
@@ -380,7 +497,12 @@ function resetQuiz() {
     resultsDiv.innerHTML = "";
     retakeBtn.style.display = "none";
     submitBtn.disabled = false;
-    clearQuestionStates();
+    clearColoring();
+
+    const firstField = quizQuestions.querySelector("input, textarea, select");
+    if (firstField) {
+        firstField.focus();
+    }
 }
 
 function clearQuizUI() {
@@ -388,13 +510,14 @@ function clearQuizUI() {
     quizQuestions.innerHTML = "";
     resultsDiv.innerHTML = "";
     retakeBtn.style.display = "none";
-    clearQuestionStates();
+    clearColoring();
 }
 
-function clearQuestionStates() {
+function clearColoring() {
     const blocks = document.querySelectorAll(".question");
+
     blocks.forEach((block) => {
-        block.classList.remove("correct", "incorrect", "missing");
+        block.classList.remove("correct", "incorrect");
     });
 }
 
@@ -406,8 +529,9 @@ function arraysEqual(first, second) {
     return first.every((value, index) => value === second[index]);
 }
 
-function normalizeText(value) {
-    return String(value).trim().toLowerCase().replace(/\s+/g, " ");
+function setQuizHeader(title, subtitle) {
+    quizTitle.textContent = title;
+    quizSubtitle.textContent = subtitle;
 }
 
 function getFeedbackMessage(score, total) {
@@ -427,7 +551,10 @@ function getFeedbackMessage(score, total) {
 }
 
 function escapeHtml(value) {
-    const div = document.createElement("div");
-    div.textContent = value;
-    return div.innerHTML;
+    return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
 }

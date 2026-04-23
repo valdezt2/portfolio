@@ -27,8 +27,7 @@
     {
       "type": "free-response",
       "prompt": "Write the name of the app used with the Myo Unit for visualization and setup.",
-      "placeholder": "Type the app name",
-      "acceptableAnswers": [
+      "answer": [
         "myologic pro",
         "myologic pro app"
       ]
@@ -114,8 +113,7 @@
     {
       "type": "free-response",
       "prompt": "What kind of signals does the Myo Unit visualize in real time?",
-      "placeholder": "Type the signal type",
-      "acceptableAnswers": [
+      "answer": [
         "emg",
         "emg signals",
         "electromyographic signals",

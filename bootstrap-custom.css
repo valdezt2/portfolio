@@ -1,0 +1,92 @@
+/* /bootstrap-custom.css */
+:root{
+  --brand-primary:#0d6efd;
+  --brand-accent:#6610f2;
+  --brand-dark:#111827;
+  --brand-light:#f8fafc;
+  --brand-soft:#eef2ff;
+}
+
+body{
+  background: linear-gradient(180deg, var(--brand-light) 0%, var(--brand-soft) 100%);
+  color:#1f2937;
+}
+
+.navbar-brand{
+  letter-spacing:.02em;
+}
+
+.page-hero{
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-accent));
+  color:#fff;
+  border-radius:1.5rem;
+}
+
+.page-hero-light{
+  background:#fff;
+  border-radius:1.5rem;
+  box-shadow:0 .75rem 1.5rem rgba(15,23,42,.08);
+}
+
+.section-card,
+.feature-card,
+.media-card,
+.info-card{
+  border:0;
+  border-radius:1.25rem;
+  box-shadow:0 .75rem 1.5rem rgba(15,23,42,.08);
+}
+
+.media-img,
+.project-img,
+.showcase-img,
+.profile-photo{
+  width:100%;
+  border-radius:1rem;
+  object-fit:cover;
+  box-shadow:0 .75rem 1.5rem rgba(15,23,42,.12);
+}
+
+.profile-photo{
+  max-width:320px;
+  aspect-ratio:1 / 1;
+}
+
+.article-body p,
+.article-body li{
+  font-size:1.05rem;
+  line-height:1.8;
+}
+
+.article-body h2,
+.article-body h3{
+  margin-top:1.75rem;
+}
+
+.swatch{
+  height:52px;
+  border-radius:.8rem;
+  border:1px solid rgba(0,0,0,.08);
+}
+
+.footer-dark{
+  background:var(--brand-dark);
+}
+
+.table thead th{
+  white-space:nowrap;
+}
+
+blockquote.callout{
+  border-left:4px solid var(--brand-primary);
+  background:#fff;
+  padding:1rem 1.25rem;
+  border-radius:.75rem;
+  box-shadow:0 .5rem 1rem rgba(15,23,42,.05);
+}
+
+@media (max-width: 767.98px){
+  .page-hero{
+    border-radius:1rem;
+  }
+}

@@ -1,72 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Theory Article | Jacqueline Valdez</title>
-    <link rel="stylesheet" href="sitewide.css">
-    <link rel="stylesheet" href="color-theory-articles.css">
-</head>
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Color Theory Article | Jacqueline Valdez</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="bootstrap-custom.css">
+    </head>
+    <body>
 
-<body>
-
-<header>
-
-    <nav class="navbar">
-  <ul class="nav-menu">
-    
-    <li class="dropdown">
-      <a href="index.html" class="nav-link">Home ▾</a>
-      <ul class="dropdown-menu">
-        <li><a href="color-theory.html">Color Theory</a></li>
-        <li><a href="color-theory-overview.html">Color Theory Overview</a></li>
-        <li><a href="color-theme-showcase.html">Color Themes</a></li>
-        <li><a href="typography-showcase.html">Typography Showcase</a></li>
-        <li><a href="magazine-cover.html">Magazine Cover</a></li>
-        <li><a href="photo-restoration.html">Photo Restoration</a></li>
-        <li><a href="resume.html">Resume</a></li>
-      </ul>
-    </li>
-
-  </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">Jacqueline Valdez</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="colorMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Color</a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="colorMenu">
+                        <li><a class="dropdown-item" href="color-theory.html">Color Theory</a></li>
+                        <li><a class="dropdown-item" href="color-theory-overview.html">Color Theory Overview</a></li>
+                        <li><a class="dropdown-item" href="color-theme-showcase.html">Color Theme Showcase</a></li>
+                        <li><a class="dropdown-item" href="color-theory-article.html">Color Theory Article</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="typeMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Typography</a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="typeMenu">
+                        <li><a class="dropdown-item" href="typography-showcase.html">Typography Showcase</a></li>
+                        <li><a class="dropdown-item" href="typography-overview.html">Typography Overview</a></li>
+                        <li><a class="dropdown-item" href="typography-article.html">Typography Article</a></li>
+                        <li><a class="dropdown-item" href="font-types-article.html">Font Types Article</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="magazine-cover.html">Magazine Cover</a></li>
+                <li class="nav-item"><a class="nav-link" href="photo-restoration.html">Photo Restoration</a></li>
+                <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                <li class="nav-item"><a class="nav-link" href="external-stylesheet.index.html">Project Directory</a></li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
-
-</header>
-
-    </header>
-
-    <main class="article-container">
-        <article>
-            <header class="article-header">
-                <h1>Understanding Color Theory in Modern Design</h1>
-                <p class="byline">By Jacqueline Valdez | 2026</p>
+<main class="container py-5">
+    <article class="card section-card article-body">
+        <div class="card-body p-4 p-md-5">
+            <header class="mb-4">
+                <span class="badge text-bg-primary mb-3">Article</span>
+                <h1 class="display-6 fw-bold">Understanding Color Theory in Modern Design</h1>
+                <p class="text-secondary mb-0">By Jacqueline Valdez | 2026</p>
             </header>
 
-            <section class="article-content">
-                <p>Color theory is more than just picking pretty colors; it is a practical combination of art and science used to determine what colors look good together. In the world of clinical education, utilizing the right color palette can actually improve learner retention and focus.</p>
+            <p>Color theory is more than selecting attractive hues. It is a practical combination of art and science used to decide which colors work together and how they affect the viewer. In clinical education and web design, the right palette can improve focus, support readability, and reinforce brand tone.</p>
 
-                <h2>The Importance of Contrast</h2>
-                <p>One of the most critical aspects of color theory in web design is contrast. High contrast, such as black text on a white background, is essential for accessibility. When we look at complementary colors—those opposite each other on the color wheel—we see the highest possible contrast, which is excellent for highlighting important call-to-action buttons.</p>
+            <h2>The Importance of Contrast</h2>
+            <p>Contrast is one of the most important principles in digital design. High contrast, such as dark text on a light background, improves accessibility and helps users process information efficiently. Complementary colors create the strongest contrast, making them useful for highlighting buttons, alerts, and calls to action.</p>
 
-                
+            <blockquote class="callout my-4">Strong contrast improves accessibility, supports hierarchy, and helps key information stand out.</blockquote>
 
-                <h2>Emotional Impact</h2>
-                <p>Every color carries an emotional weight. Warm colors like red and orange can evoke energy and passion, but also urgency or danger. Cool colors like blue and green are often associated with calm, trust, and professionalism. In my portfolio, I use these principles to ensure that each project communicates the intended mood before the user even reads a single word.</p>
+            <h2>Emotional Impact</h2>
+            <p>Every color carries emotional weight. Warm colors such as red and orange can convey energy, urgency, or excitement. Cool colors such as blue and green are often associated with trust, calm, and professionalism. These relationships influence whether an interface feels clinical, creative, welcoming, or bold.</p>
 
-                <h2>Conclusion</h2>
-                <p>Whether designing a magazine cover or a clinical training module, color theory remains a foundational tool for any visual communicator. By mastering the relationships between hues, saturation, and value, we can create more effective and engaging digital experiences.</p>
-            </section>
+            <h2>Conclusion</h2>
+            <p class="mb-0">Whether designing a magazine cover or a clinical training module, color theory remains a foundational tool for visual communication. Understanding hue, saturation, value, and harmony allows designers to build more effective and engaging experiences.</p>
+        </div>
+    </article>
+</main>
 
-            <footer class="article-footer">
-                <p><a href="index.html">← Home</a></p>
-            </footer>
-        </article>
-    </main>
+<footer class="footer-dark text-white py-4 mt-5">
+    <div class="container text-center">
+        <p class="mb-0">© 2026 Jacqueline Valdez. All rights reserved.</p>
+    </div>
+</footer>
 
-    <footer>
-        <p>© 2026 Jacqueline Valdez. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>

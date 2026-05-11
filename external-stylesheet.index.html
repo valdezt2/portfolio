@@ -1,64 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Directory | Jacqueline Valdez</title>
-    <link rel="stylesheet" href="sitewide.css">
-    <link rel="stylesheet" href="homepage.css">
-</head>
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project Directory | Jacqueline Valdez</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="bootstrap-custom.css">
+    </head>
+    <body>
 
-<nav class="main-nav">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="color-theory.html">Color Theory</a></li>
-        <li><a href="color-theme-showcase.html">Color Themes</a></li>
-        <li><a href="typography-showcase.html">Typography</a></li>
-        <li><a href="magazine-cover.html">Magazine</a></li>
-        <li><a href="photo-restoration.html">Restoration</a></li>
-        <li><a href="resume.html">Resume</a></li>
-    </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">Jacqueline Valdez</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="colorMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Color</a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="colorMenu">
+                        <li><a class="dropdown-item" href="color-theory.html">Color Theory</a></li>
+                        <li><a class="dropdown-item" href="color-theory-overview.html">Color Theory Overview</a></li>
+                        <li><a class="dropdown-item" href="color-theme-showcase.html">Color Theme Showcase</a></li>
+                        <li><a class="dropdown-item" href="color-theory-article.html">Color Theory Article</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="typeMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Typography</a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="typeMenu">
+                        <li><a class="dropdown-item" href="typography-showcase.html">Typography Showcase</a></li>
+                        <li><a class="dropdown-item" href="typography-overview.html">Typography Overview</a></li>
+                        <li><a class="dropdown-item" href="typography-article.html">Typography Article</a></li>
+                        <li><a class="dropdown-item" href="font-types-article.html">Font Types Article</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="magazine-cover.html">Magazine Cover</a></li>
+                <li class="nav-item"><a class="nav-link" href="photo-restoration.html">Photo Restoration</a></li>
+                <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                <li class="nav-item"><a class="nav-link" href="external-stylesheet.index.html">Project Directory</a></li>
+            </ul>
+        </div>
+    </div>
 </nav>
-    </header>
 
-    <main>
-        <section style="max-width: 800px; margin: 40px auto; padding: 20px;">
-            <h1>Portfolio Project Index</h1>
-            <p>This page serves as a directory for all web design and visual communication projects within this repository.</p>
-            
-            <hr>
+<main class="container py-5">
+    <section class="page-hero p-4 p-md-5 mb-5">
+        <h1 class="display-6 fw-bold">Portfolio Project Directory</h1>
+        <p class="lead mb-0">A Bootstrap directory page linking to the portfolio’s core pages, design exercises, and visual projects.</p>
+    </section>
 
-            <h3>Core Pages</h3>
-            <ul>
-                <li><a href="index.html">Main Portfolio Home</a></li>
-                <li><a href="resume.html">Professional Resume</a></li>
-            </ul>
+    <div class="row g-4">
+        <div class="col-md-6 col-xl-3">
+            <div class="card section-card h-100">
+                <div class="card-body">
+                    <h2 class="h4">Core Pages</h2>
+                    <div class="list-group list-group-flush">
+                        <a class="list-group-item list-group-item-action" href="index.html">Main Portfolio Home</a>
+                        <a class="list-group-item list-group-item-action" href="resume.html">Professional Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+            <div class="card section-card h-100">
+                <div class="card-body">
+                    <h2 class="h4">Color Design</h2>
+                    <div class="list-group list-group-flush">
+                        <a class="list-group-item list-group-item-action" href="color-theory.html">Color Theory Hub</a>
+                        <a class="list-group-item list-group-item-action" href="color-theory-overview.html">Color Theory Overview</a>
+                        <a class="list-group-item list-group-item-action" href="color-theme-showcase.html">Color Theme Showcase</a>
+                        <a class="list-group-item list-group-item-action" href="color-theory-article.html">Color Theory Article</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+            <div class="card section-card h-100">
+                <div class="card-body">
+                    <h2 class="h4">Typography</h2>
+                    <div class="list-group list-group-flush">
+                        <a class="list-group-item list-group-item-action" href="typography-showcase.html">Typography Showcase</a>
+                        <a class="list-group-item list-group-item-action" href="typography-overview.html">Typography Overview</a>
+                        <a class="list-group-item list-group-item-action" href="font-types-article.html">Font Types Article</a>
+                        <a class="list-group-item list-group-item-action" href="typography-article.html">Typography Article</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+            <div class="card section-card h-100">
+                <div class="card-body">
+                    <h2 class="h4">Visual Projects</h2>
+                    <div class="list-group list-group-flush">
+                        <a class="list-group-item list-group-item-action" href="magazine-cover.html">Magazine Cover Layout</a>
+                        <a class="list-group-item list-group-item-action" href="photo-restoration.html">Digital Photo Restoration</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 
-            <h3>Design Principles</h3>
-            <ul>
-                <li><a href="color-theory.html">Color Theory Hub</a></li>
-                <li><a href="color-theme-showcase.html">Color Theme Showcase</a></li>
-                <li><a href="typography-showcase.html">Typography Showcase</a></li>
-            </ul>
+<footer class="footer-dark text-white py-4 mt-5">
+    <div class="container text-center">
+        <p class="mb-0">© 2026 Jacqueline Valdez. All rights reserved.</p>
+    </div>
+</footer>
 
-            <h3>Visual Projects</h3>
-            <ul>
-                <li><a href="magazine-cover.html">Magazine Cover Layout</a></li>
-                <li><a href="photo-restoration.html">Digital Photo Restoration</a></li>
-            </ul>
-
-            <h3>Article Exercises</h3>
-            <ul>
-                <li><a href="color-theory-article.html">Color Theory Article</a></li>
-                <li><a href="font-types-article.html">Font Types Article</a></li>
-                <li><a href="typography-article.html">Typography Article</a></li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2026 Jacqueline Valdez. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>

@@ -1,71 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typography Showcase | Jacqueline Valdez</title>
-    <link rel="stylesheet" href="sitewide.css">
-    <link rel="stylesheet" href="typography-showcase.css">
-</head>
-<body>
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Typography Showcase | Jacqueline Valdez</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="bootstrap-custom.css">
+    </head>
+    <body>
 
-    <header>
-      <nav class="navbar">
-  <ul class="nav-menu">
-    
-    <li class="dropdown">
-      <a href="index.html" class="nav-link">Home ▾</a>
-      <ul class="dropdown-menu">
-        <li><a href="color-theory.html">Color Theory</a></li>
-        <li><a href="color-theory-overview.html">Color Theory Overview</a></li>
-        <li><a href="color-theme-showcase.html">Color Themes</a></li>
-        <li><a href="typography-showcase.html">Typography Showcase</a></li>
-        <li><a href="magazine-cover.html">Magazine Cover</a></li>
-        <li><a href="photo-restoration.html">Photo Restoration</a></li>
-        <li><a href="resume.html">Resume</a></li>
-      </ul>
-    </li>
-
-  </ul>
-</nav>
-    </header>
-
-    <main>
-        <section class="typo-header">
-            <h1>Typography & Visual Hierarchy</h1>
-            <p>Exploring the impact of typefaces on readability, brand identity, and user experience in digital and print media.</p>
-        </section>
-
-        <section class="typo-grid">
-            <div class="font-specimen">
-                <h2 style="font-family: serif;">Serif Typography</h2>
-                <p>Serif fonts are often used for long-form body text in print. They convey a sense of tradition, reliability, and authority.</p>
-            </div>
-
-            <div class="font-specimen">
-                <h2 style="font-family: sans-serif;">Sans-Serif Typography</h2>
-                <p>Sans-serif fonts are clean and modern. They are highly legible on digital screens and represent innovation and clarity.</p>
-            </div>
-        </section>
-
-        <section class="related-articles">
-            <h3>Detailed Typography Exercises</h3>
-            <ul>
-                <li><a href="typography-article.html">The Basics of Web Typography</a></li>
-                <li><a href="font-types-article.html">Classifying Font Types</a></li>
-                <li><a href="typography-overview.html">Typography Overview</a></li>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">Jacqueline Valdez</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="colorMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Color</a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="colorMenu">
+                        <li><a class="dropdown-item" href="color-theory.html">Color Theory</a></li>
+                        <li><a class="dropdown-item" href="color-theory-overview.html">Color Theory Overview</a></li>
+                        <li><a class="dropdown-item" href="color-theme-showcase.html">Color Theme Showcase</a></li>
+                        <li><a class="dropdown-item" href="color-theory-article.html">Color Theory Article</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="typeMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Typography</a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="typeMenu">
+                        <li><a class="dropdown-item" href="typography-showcase.html">Typography Showcase</a></li>
+                        <li><a class="dropdown-item" href="typography-overview.html">Typography Overview</a></li>
+                        <li><a class="dropdown-item" href="typography-article.html">Typography Article</a></li>
+                        <li><a class="dropdown-item" href="font-types-article.html">Font Types Article</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="magazine-cover.html">Magazine Cover</a></li>
+                <li class="nav-item"><a class="nav-link" href="photo-restoration.html">Photo Restoration</a></li>
+                <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                <li class="nav-item"><a class="nav-link" href="external-stylesheet.index.html">Project Directory</a></li>
             </ul>
-        </section>
+        </div>
+    </div>
+</nav>
 
-                    <footer class="typography-footer">
-                <p><a href="index.html">← Home</a></p>
-            </footer>
-        </typography>
-    </main>
+<main class="container py-5">
+    <section class="page-hero p-4 p-md-5 mb-5">
+        <h1 class="display-6 fw-bold">Typography &amp; Visual Hierarchy</h1>
+        <p class="lead mb-0">A Bootstrap showcase demonstrating how typography supports readability, hierarchy, and brand identity across digital and print layouts.</p>
+    </section>
 
-    <footer>
-        <p>© 2026 Jacqueline Valdez. All rights reserved.</p>
-    </footer>
+    <section class="row g-4 mb-5">
+        <div class="col-md-6">
+            <div class="card section-card h-100">
+                <div class="card-body">
+                    <h2 class="display-6" style="font-family: Georgia, serif;">Serif Typography</h2>
+                    <p>Serif typefaces are often used for long-form reading and editorial layouts. They convey tradition, authority, and a more formal tone.</p>
+                    <span class="badge text-bg-light border">Print Friendly</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card section-card h-100">
+                <div class="card-body">
+                    <h2 class="display-6" style="font-family: Arial, sans-serif;">Sans-Serif Typography</h2>
+                    <p>Sans-serif fonts are clean, modern, and highly legible on screens, making them a strong choice for interfaces and instructional content.</p>
+                    <span class="badge text-bg-light border">Screen Friendly</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</body>
-</html>
+    <section class="card section-card">
+        <div class="card-body p-4">
+            <h2 class="h3 mb-4">Detailed Typography Exercises</h2>
+            <div class="list-group">
+                <a class="list-group-item list-group-item-action" href="typography-article.html">The Basics of Web Typography</a>
+                <a class="list-group-item list-group-item-action" href="font-types-article.html">Classifying Font Types</a>
+                <a class="list-group-item list-group-item-action" href="typography-overview.html">Typography Overview</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer-dark text-white py-4 mt-5">
+    <div class="container text-center">
+        <p class="mb-0">© 2026 Jacqueline Valdez. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>

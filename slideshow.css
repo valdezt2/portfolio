@@ -1,0 +1,141 @@
+/* Basic layout */
+.hero-center {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Slides */
+.slide {
+  display: none;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.slide p {
+  margin-bottom: 0.75rem;
+}
+
+/* CTA button */
+.cta-button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  background-color: #1f6feb;
+  color: #ffffff;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background-color: #164ea8;
+}
+
+/* Controls */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.05);
+  border: none;
+  border-radius: 50%;
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0.5rem;
+}
+
+.next {
+  right: 0.5rem;
+}
+
+.prev:hover,
+.next:hover,
+.prev:focus,
+.next:focus {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Dots */
+.dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  margin: 0 0.25rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #d0d7de;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #1f6feb;
+}
+
+/* CTA section */
+.cta-section {
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.cta-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: #1f6feb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cta-link:hover,
+.cta-link:focus {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slideshow-container {
+    padding: 1rem;
+  }
+
+  .prev,
+  .next {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .slide {
+    padding: 1.25rem;
+  }
+}

@@ -3,264 +3,394 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Work With Me | Client Slideshow</title>
+    <title>Client Slideshow | Jacqueline Valdez</title>
     <meta name="description" content="A responsive client-focused slideshow that explains my web development services, project approach, and working style.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-custom.css">
     <link rel="stylesheet" href="client-slideshow.css">
-    <script src="client-slideshow.js" defer></script>
 </head>
 <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-semibold" href="index.html">Jacqueline Valdez</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#siteNav"
+                aria-controls="siteNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <header class="site-header">
-        <div class="container header-inner">
-            <p class="brand">Jacqueline Valdez</p>
-            <nav aria-label="Primary">
-                <a class="header-link" href="index.html">Portfolio</a>
-                <a class="header-link header-link--button" href="https://www.linkedin.com/in/jackie-valdez-co-bocp-faaop/" target="_blank" rel="noopener noreferrer">Connect</a>
-            </nav>
-        </div>
-    </header>
+            <div class="collapse navbar-collapse" id="siteNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
 
-    <main id="main-content">
-        <section class="intro">
-            <div class="container">
-                <p class="eyebrow">Client Presentation</p>
-                <h1>I build clear, modern websites that make your business easier to trust.</h1>
-                <p class="intro-copy">
-                    This slideshow is designed for potential clients. It explains what I offer, how I manage a project, and what the working experience will feel like from kickoff to launch.
-                </p>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="colorMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Color
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="colorMenu">
+                            <li><a class="dropdown-item" href="color-theory.html">Color Theory</a></li>
+                            <li><a class="dropdown-item" href="color-theory-overview.html">Color Theory Overview</a></li>
+                            <li><a class="dropdown-item" href="color-theme-showcase.html">Color Theme Showcase</a></li>
+                            <li><a class="dropdown-item" href="color-theory-article.html">Color Theory Article</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="typeMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Typography
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="typeMenu">
+                            <li><a class="dropdown-item" href="typography-showcase.html">Typography Showcase</a></li>
+                            <li><a class="dropdown-item" href="typography-overview.html">Typography Overview</a></li>
+                            <li><a class="dropdown-item" href="typography-article.html">Typography Article</a></li>
+                            <li><a class="dropdown-item" href="font-types-article.html">Font Types Article</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="client-slideshow.html">Client Slideshow</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="magazine-cover.html">Magazine Cover</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="photo-restoration.html">Photo Restoration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="external-stylesheet.index.html">Project Directory</a>
+                    </li>
+                </ul>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <section class="carousel-section">
-            <div class="container">
-                <div class="carousel-shell">
-                    <div
-                        class="carousel"
-                        id="clientCarousel"
-                        role="region"
-                        aria-roledescription="carousel"
-                        aria-label="Reasons to work with me"
-                    >
-                        <div class="carousel-status" aria-live="polite">
-                            <span id="slideStatus">Slide 1 of 6</span>
-                        </div>
-
-                        <div class="carousel-viewport">
-                            <div class="slides-track" id="slidesTrack">
-                                <article class="slide is-active" data-slide tabindex="0" aria-label="Slide 1">
-                                    <div class="slide-grid">
-                                        <div class="slide-copy">
-                                            <p class="slide-kicker">01 • Value</p>
-                                            <h2>A website should do more than look good.</h2>
-                                            <p>
-                                                I create websites that help your audience understand who you are, what you offer, and why they should contact you. My goal is a site that feels professional, easy to use, and aligned with your brand.
-                                            </p>
-                                            <div class="pill-row">
-                                                <span class="pill">Clear messaging</span>
-                                                <span class="pill">Responsive design</span>
-                                                <span class="pill">Professional presentation</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="visual-card browser-card" aria-hidden="true">
-                                            <div class="browser-dots">
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                            </div>
-                                            <div class="browser-body">
-                                                <div class="browser-panel browser-panel--hero"></div>
-                                                <div class="browser-grid">
-                                                    <div class="browser-panel"></div>
-                                                    <div class="browser-panel"></div>
-                                                    <div class="browser-panel"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-
-                                <article class="slide" data-slide tabindex="-1" aria-label="Slide 2">
-                                    <div class="slide-grid">
-                                        <div class="slide-copy">
-                                            <p class="slide-kicker">02 • Skills</p>
-                                            <h2>What I bring to your project</h2>
-                                            <p>
-                                                I focus on clean structure, readable layouts, and user-friendly experiences. Every project is built mobile-first, tested carefully, and organized so the finished site is easy to maintain.
-                                            </p>
-                                            <div class="feature-list">
-                                                <div class="feature-card">
-                                                    <h3>Clean code</h3>
-                                                    <p>Modern HTML, CSS, and JavaScript with a strong focus on readability and reliability.</p>
-                                                </div>
-                                                <div class="feature-card">
-                                                    <h3>Responsive layout</h3>
-                                                    <p>Your site will look polished on phones, tablets, laptops, and large screens.</p>
-                                                </div>
-                                                <div class="feature-card">
-                                                    <h3>Usability first</h3>
-                                                    <p>Navigation, spacing, contrast, and content hierarchy are designed for real people.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-
-                                <article class="slide" data-slide tabindex="-1" aria-label="Slide 3">
-                                    <div class="slide-grid">
-                                        <div class="slide-copy">
-                                            <p class="slide-kicker">03 • Experience</p>
-                                            <h2>What working with me feels like</h2>
-                                            <p>
-                                                I keep projects calm, organized, and transparent. You will always know what stage we are in, what I need from you, and what comes next.
-                                            </p>
-                                            <ul class="check-list">
-                                                <li>Clear kickoff questions so I understand your goals.</li>
-                                                <li>Simple explanations without overwhelming technical jargon.</li>
-                                                <li>Regular updates, realistic timelines, and fast follow-through.</li>
-                                                <li>Feedback rounds that stay focused on your priorities.</li>
-                                            </ul>
-                                        </div>
-
-                                        <aside class="visual-card process-snapshot">
-                                            <h3>My working style</h3>
-                                            <dl>
-                                                <div>
-                                                    <dt>Communication</dt>
-                                                    <dd>Responsive, direct, and professional</dd>
-                                                </div>
-                                                <div>
-                                                    <dt>Timeline</dt>
-                                                    <dd>Structured milestones with visible progress</dd>
-                                                </div>
-                                                <div>
-                                                    <dt>Approach</dt>
-                                                    <dd>Collaborative, practical, and solution-focused</dd>
-                                                </div>
-                                            </dl>
-                                        </aside>
-                                    </div>
-                                </article>
-
-                                <article class="slide" data-slide tabindex="-1" aria-label="Slide 4">
-                                    <div class="slide-grid">
-                                        <div class="slide-copy">
-                                            <p class="slide-kicker">04 • Process</p>
-                                            <h2>My approach to managing your web design project</h2>
-                                            <p>
-                                                A strong project runs on a clear process. I break the work into manageable stages so the design stays aligned with your goals and the launch feels predictable instead of stressful.
-                                            </p>
-                                        </div>
-
-                                        <div class="timeline-grid">
-                                            <section class="timeline-card">
-                                                <span class="timeline-number">1</span>
-                                                <h3>Discover</h3>
-                                                <p>We define your audience, goals, content, and the main action you want visitors to take.</p>
-                                            </section>
-                                            <section class="timeline-card">
-                                                <span class="timeline-number">2</span>
-                                                <h3>Design</h3>
-                                                <p>I shape the layout, hierarchy, and visual direction so the site looks polished and purposeful.</p>
-                                            </section>
-                                            <section class="timeline-card">
-                                                <span class="timeline-number">3</span>
-                                                <h3>Build</h3>
-                                                <p>I develop the page with responsive, standards-based code and smooth interactive behavior.</p>
-                                            </section>
-                                            <section class="timeline-card">
-                                                <span class="timeline-number">4</span>
-                                                <h3>Test &amp; Launch</h3>
-                                                <p>I review functionality, mobile layout, performance, and polish before final delivery.</p>
-                                            </section>
-                                        </div>
-                                    </div>
-                                </article>
-
-                                <article class="slide" data-slide tabindex="-1" aria-label="Slide 5">
-                                    <div class="slide-grid">
-                                        <div class="slide-copy">
-                                            <p class="slide-kicker">05 • Results</p>
-                                            <h2>What you receive at the end</h2>
-                                            <p>
-                                                You get more than a finished page. You get a clean, client-ready product that supports your message and feels ready to share.
-                                            </p>
-                                        </div>
-
-                                        <div class="deliverables-grid">
-                                            <div class="deliverable-card">
-                                                <h3>Strong first impression</h3>
-                                                <p>A visual style that looks professional and supports trust.</p>
-                                            </div>
-                                            <div class="deliverable-card">
-                                                <h3>Mobile-friendly layout</h3>
-                                                <p>A consistent experience across devices and screen sizes.</p>
-                                            </div>
-                                            <div class="deliverable-card">
-                                                <h3>Clear calls to action</h3>
-                                                <p>Content that encourages visitors to contact you or learn more.</p>
-                                            </div>
-                                            <div class="deliverable-card">
-                                                <h3>Launch-ready code</h3>
-                                                <p>Valid, modern front-end code with organized structure.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-
-                                <article class="slide" data-slide tabindex="-1" aria-label="Slide 6">
-                                    <div class="slide-grid">
-                                        <div class="slide-copy">
-                                            <p class="slide-kicker">06 • Next Step</p>
-                                            <h2>Ready to build something clear, polished, and purposeful?</h2>
-                                            <p>
-                                                If you want a site that communicates your value and gives your audience confidence, I would love to help. My process is thoughtful, collaborative, and focused on outcomes that matter to your business.
-                                            </p>
-                                            <div class="cta-row">
-                                                <a class="cta-button" href="https://www.linkedin.com/in/jackie-valdez-co-bocp-faaop/" target="_blank" rel="noopener noreferrer">Start the conversation</a>
-                                                <a class="cta-link" href="index.html">View my portfolio</a>
-                                            </div>
-                                        </div>
-
-                                        <div class="visual-card promise-card">
-                                            <h3>What you can expect</h3>
-                                            <ul class="check-list">
-                                                <li>A professional and organized project flow</li>
-                                                <li>Design choices that support your message</li>
-                                                <li>Responsive, user-friendly development</li>
-                                                <li>A final product you feel confident sharing</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-
-                        <div class="carousel-controls">
-                            <button class="nav-button" id="prevButton" type="button" aria-label="Show previous slide">Previous</button>
-                            <div class="dot-nav" id="dotNav" aria-label="Slide navigation"></div>
-                            <button class="nav-button" id="nextButton" type="button" aria-label="Show next slide">Next</button>
-                        </div>
-
-                        <div class="progress-bar" aria-hidden="true">
-                            <span class="progress-indicator" id="progressIndicator"></span>
+    <main class="container py-5">
+        <section class="card page-hero-light mb-4">
+            <div class="card-body p-4 p-md-5">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-8">
+                        <span class="badge text-bg-primary mb-3">Client Presentation</span>
+                        <h1 class="display-6 fw-bold mb-3">Why Clients Choose to Work With Me</h1>
+                        <p class="lead text-secondary mb-3">
+                            This slideshow presents my web development value, communication style,
+                            and structured project approach for potential clients.
+                        </p>
+                        <p class="mb-0">
+                            My process combines clinical precision, thoughtful design, responsive development,
+                            and dependable communication from discovery through launch.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <div class="d-grid gap-2 d-lg-flex justify-content-lg-end flex-wrap">
+                            <a href="resume.html" class="btn btn-primary">View Resume</a>
+                            <a href="index.html" class="btn btn-outline-primary">Back to Portfolio</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="closing-note">
-            <div class="container">
-                <div class="closing-card">
-                    <h2>Why this page works for the assignment</h2>
-                    <p>
-                        It is responsive, focused on client communication, and built as a working slideshow with accessible controls, smooth transitions, and standards-based HTML, CSS, and JavaScript.
-                    </p>
+        <section class="card section-card mb-4">
+            <div class="card-body p-4 p-md-5">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <h2 class="h3 mb-3">Client Experience</h2>
+                        <p class="text-secondary mb-0">
+                            The goal is a smooth, professional experience with clear scope,
+                            responsive updates, and a polished final result.
+                        </p>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="card feature-card h-100">
+                                    <div class="card-body">
+                                        <h3 class="h5 text-primary">Clear Communication</h3>
+                                        <p class="mb-0">Defined steps, concise updates, and transparent decision-making.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card feature-card h-100">
+                                    <div class="card-body">
+                                        <h3 class="h5 text-primary">Responsive Design</h3>
+                                        <p class="mb-0">Layouts that work well on mobile, tablet, and desktop screens.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card feature-card h-100">
+                                    <div class="card-body">
+                                        <h3 class="h5 text-primary">Standards-Based Build</h3>
+                                        <p class="mb-0">Modern HTML, CSS, and JavaScript with a professional finish.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card section-card mb-4">
+            <div class="card-body p-4 p-md-5">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+                    <div>
+                        <h2 class="h3 mb-2">Client Slideshow</h2>
+                        <p class="text-secondary mb-0">
+                            Use the controls, keyboard arrows, or touch gestures to move through the presentation.
+                        </p>
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <a href="resume.html" class="btn btn-outline-primary btn-sm">Resume</a>
+                        <a href="external-stylesheet.index.html" class="btn btn-outline-primary btn-sm">Project Directory</a>
+                    </div>
+                </div>
+
+                <div class="carousel-section">
+                    <div class="carousel-shell">
+                        <div id="clientCarousel" class="carousel" tabindex="0" aria-label="Client slideshow">
+                            <div class="carousel-status" id="slideStatus">Slide 1 of 6</div>
+
+                            <div class="carousel-viewport">
+                                <div id="slidesTrack" class="slides-track">
+                                    <article class="slide is-active" data-slide tabindex="0" aria-label="Slide 1">
+                                        <div class="slide-grid">
+                                            <div class="slide-copy">
+                                                <p class="slide-kicker">01 • Value</p>
+                                                <h2>A website should do more than look good.</h2>
+                                                <p>
+                                                    I create websites that help your audience understand who you are, what you offer, and why they should contact you. My goal is a site that feels professional, easy to use, and aligned with your brand.
+                                                </p>
+                                                <div class="pill-row">
+                                                    <span class="pill">Clear messaging</span>
+                                                    <span class="pill">Responsive design</span>
+                                                    <span class="pill">Professional presentation</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="visual-card browser-card" aria-hidden="true">
+                                                <div class="browser-dots">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                                <div class="browser-body">
+                                                    <div class="browser-panel browser-panel--hero"></div>
+                                                    <div class="browser-grid">
+                                                        <div class="browser-panel"></div>
+                                                        <div class="browser-panel"></div>
+                                                        <div class="browser-panel"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <article class="slide" data-slide tabindex="-1" aria-label="Slide 2">
+                                        <div class="slide-grid">
+                                            <div class="slide-copy">
+                                                <p class="slide-kicker">02 • Skills</p>
+                                                <h2>What I bring to your project</h2>
+                                                <p>
+                                                    I focus on clean structure, readable layouts, and user-friendly experiences. Every project is built mobile-first, tested carefully, and organized so the finished site is easy to maintain.
+                                                </p>
+                                                <div class="feature-list">
+                                                    <div class="feature-card">
+                                                        <h3>Clean code</h3>
+                                                        <p>Modern HTML, CSS, and JavaScript with a strong focus on readability and reliability.</p>
+                                                    </div>
+                                                    <div class="feature-card">
+                                                        <h3>Responsive layout</h3>
+                                                        <p>Your site will look polished on phones, tablets, laptops, and large screens.</p>
+                                                    </div>
+                                                    <div class="feature-card">
+                                                        <h3>Usability first</h3>
+                                                        <p>Navigation, spacing, contrast, and content hierarchy are designed for real people.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <article class="slide" data-slide tabindex="-1" aria-label="Slide 3">
+                                        <div class="slide-grid">
+                                            <div class="slide-copy">
+                                                <p class="slide-kicker">03 • Experience</p>
+                                                <h2>What working with me feels like</h2>
+                                                <p>
+                                                    I keep projects calm, organized, and transparent. You will always know what stage we are in, what I need from you, and what comes next.
+                                                </p>
+                                                <ul class="check-list">
+                                                    <li>Clear kickoff questions so I understand your goals.</li>
+                                                    <li>Simple explanations without overwhelming technical jargon.</li>
+                                                    <li>Regular updates, realistic timelines, and fast follow-through.</li>
+                                                    <li>Feedback rounds that stay focused on your priorities.</li>
+                                                </ul>
+                                            </div>
+
+                                            <aside class="visual-card process-snapshot">
+                                                <h3>My working style</h3>
+                                                <dl>
+                                                    <div>
+                                                        <dt>Communication</dt>
+                                                        <dd>Responsive, direct, and professional</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>Timeline</dt>
+                                                        <dd>Structured milestones with visible progress</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>Approach</dt>
+                                                        <dd>Collaborative, practical, and solution-focused</dd>
+                                                    </div>
+                                                </dl>
+                                            </aside>
+                                        </div>
+                                    </article>
+
+                                    <article class="slide" data-slide tabindex="-1" aria-label="Slide 4">
+                                        <div class="slide-grid">
+                                            <div class="slide-copy">
+                                                <p class="slide-kicker">04 • Process</p>
+                                                <h2>My approach to managing your web design project</h2>
+                                                <p>
+                                                    A strong project runs on a clear process. I break the work into manageable stages so the design stays aligned with your goals and the launch feels predictable instead of stressful.
+                                                </p>
+                                            </div>
+
+                                            <div class="timeline-grid">
+                                                <section class="timeline-card">
+                                                    <span class="timeline-number">1</span>
+                                                    <h3>Discover</h3>
+                                                    <p>We define your audience, goals, content, and the main action you want visitors to take.</p>
+                                                </section>
+                                                <section class="timeline-card">
+                                                    <span class="timeline-number">2</span>
+                                                    <h3>Design</h3>
+                                                    <p>I shape the layout, hierarchy, and visual direction so the site looks polished and purposeful.</p>
+                                                </section>
+                                                <section class="timeline-card">
+                                                    <span class="timeline-number">3</span>
+                                                    <h3>Build</h3>
+                                                    <p>I develop the page with responsive, standards-based code and smooth interactive behavior.</p>
+                                                </section>
+                                                <section class="timeline-card">
+                                                    <span class="timeline-number">4</span>
+                                                    <h3>Test &amp; Launch</h3>
+                                                    <p>I review functionality, mobile layout, performance, and polish before final delivery.</p>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <article class="slide" data-slide tabindex="-1" aria-label="Slide 5">
+                                        <div class="slide-grid">
+                                            <div class="slide-copy">
+                                                <p class="slide-kicker">05 • Results</p>
+                                                <h2>What you receive at the end</h2>
+                                                <p>
+                                                    You get more than a finished page. You get a clean, client-ready product that supports your message and feels ready to share.
+                                                </p>
+                                            </div>
+
+                                            <div class="deliverables-grid">
+                                                <div class="deliverable-card">
+                                                    <h3>Strong first impression</h3>
+                                                    <p>A visual style that looks professional and supports trust.</p>
+                                                </div>
+                                                <div class="deliverable-card">
+                                                    <h3>Mobile-friendly layout</h3>
+                                                    <p>A consistent experience across devices and screen sizes.</p>
+                                                </div>
+                                                <div class="deliverable-card">
+                                                    <h3>Clear calls to action</h3>
+                                                    <p>Content that encourages visitors to contact you or learn more.</p>
+                                                </div>
+                                                <div class="deliverable-card">
+                                                    <h3>Launch-ready code</h3>
+                                                    <p>Valid, modern front-end code with organized structure.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <article class="slide" data-slide tabindex="-1" aria-label="Slide 6">
+                                        <div class="slide-grid">
+                                            <div class="slide-copy">
+                                                <p class="slide-kicker">06 • Next Step</p>
+                                                <h2>Ready to build something clear, polished, and purposeful?</h2>
+                                                <p>
+                                                    If you want a site that communicates your value and gives your audience confidence, I would love to help. My process is thoughtful, collaborative, and focused on outcomes that matter to your business.
+                                                </p>
+                                                <div class="cta-row">
+                                                    <a class="cta-button" href="https://www.linkedin.com/in/jackie-valdez-co-bocp-faaop/" target="_blank" rel="noopener noreferrer">Start the conversation</a>
+                                                    <a class="cta-link" href="index.html">View my portfolio</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="visual-card promise-card">
+                                                <h3>What you can expect</h3>
+                                                <ul class="check-list">
+                                                    <li>A professional and organized project flow</li>
+                                                    <li>Design choices that support your message</li>
+                                                    <li>Responsive, user-friendly development</li>
+                                                    <li>A final product you feel confident sharing</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+
+                            <div class="carousel-controls">
+                                <button class="nav-button" id="prevButton" type="button" aria-label="Show previous slide">Previous</button>
+                                <div class="dot-nav" id="dotNav" aria-label="Slide navigation"></div>
+                                <button class="nav-button" id="nextButton" type="button" aria-label="Show next slide">Next</button>
+                            </div>
+
+                            <div class="progress-bar" aria-hidden="true">
+                                <span class="progress-indicator" id="progressIndicator"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card section-card">
+            <div class="card-body p-4 p-md-5 text-center">
+                <h2 class="h3 mb-3">Ready to Start a Project?</h2>
+                <p class="text-secondary mb-4">
+                    I bring a structured process, thoughtful design, and a responsive client experience to every project.
+                </p>
+                <div class="d-flex justify-content-center gap-2 flex-wrap">
+                    <a href="resume.html" class="btn btn-primary">See My Resume</a>
+                    <a href="external-stylesheet.index.html" class="btn btn-outline-primary">Project Directory</a>
+                    <a href="index.html" class="btn btn-outline-primary">Return to Portfolio</a>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer class="footer-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">© 2026 Jacqueline Valdez. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="client-slideshow.js"></script>
 </body>
 </html>
